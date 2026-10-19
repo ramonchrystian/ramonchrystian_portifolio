@@ -283,10 +283,13 @@ Apresentação transparente e documentada sem atribuição de falsas equivalênc
    * *Instituição:* Universidade Pitágoras Unopar Anhanguera.
    * *Conteúdo:* Formação superior complementar em desenvolvimento web, arquitetura de software moderna, gestão de bancos de dados e design de produtos digitais.
 
-#### Estudos Complementares (Formação Livre Especializada)
-* **Estudos Avançados em Guitarra Elétrica e Música Contemporânea:**
-  * *Instituições:* Conservatório Brasileiro de Música (CBM), Faculdade Santa Cecília & Starling Academy of Music.
-  * *Conteúdo:* Técnica instrumental, harmonia, improvisação, construção de timbres e metodologias de gravação em estúdio e ao vivo para contextos de adoração.
+#### Horizonte Vocacional & Estudos Teológicos no Truett Seminary (Baylor University, TX)
+* **Destaque:** Cartão nobre de apoio e parceria vocacional para o programa de Master of Divinity (MDiv) no George W. Truett Theological Seminary (Waco, Texas).
+* **3 Pilares de Apoio:**
+  1. *Oração & Intercessão:* Cobertura espiritual e discernimento durante todo o período preparatório.
+  2. *Mentoria Pastoral & Acadêmica:* Comunhão e aconselhamento teológico com docentes e pastores experientes.
+  3. *Apoio Financeiro & Bolsas:* Contribuições e parcerias para anuidade, taxas de seminário e bibliografia teológica.
+* **Ação Direta:** Botão de conexão pastoral direta via `ramonchrystian@gmail.com`.
 
 ---
 
@@ -332,7 +335,7 @@ Projetos apresentados em formato editorial de estudo de caso com 4 dimensões an
 ### 4.8 Contato (Section: `#contact`)
 * **Propósito:** Canal acolhedor para convites de pregação/ensino, workshops em igrejas, parcerias acadêmicas e diálogos ministeriais.
 * **Canais Verificados:**
-  1. *E-mail:* `hello@ramonchrystian.com`
+  1. *E-mail:* `ramonchrystian@gmail.com`
   2. *LinkedIn:* `https://linkedin.com/in/ramonchrystian` (com nota esclarecendo que reflete a trajetória complementar em desenvolvimento de software)
   3. *YouTube:* `https://youtube.com/@ramonchrystian`
   4. *Instagram:* `https://instagram.com/ramonchrystian`

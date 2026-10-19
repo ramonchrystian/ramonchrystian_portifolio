@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { GraduationCap, BookOpen, Music, Code2, Award, CheckCircle } from 'lucide-react'
+import { GraduationCap, BookOpen, Music, Code2, Award, CheckCircle, Compass, HeartHandshake, Mail } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
 import { formalDegrees, complementaryStudies } from '../data/degrees'
 
@@ -96,6 +96,95 @@ export default function Academic() {
             })}
           </div>
         </div>
+
+        {/* Dedicated Truett Theological Seminary MDiv Horizon & Support Card */}
+        <motion.div
+          id="truett-mdiv"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mt-12 overflow-hidden rounded-2xl border-2 border-[#B58B49]/40 bg-[#FAF8F5] p-7 sm:p-9 shadow-xs dark:border-[#D0AC6C]/40 dark:bg-[#1A1D19]"
+        >
+          <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
+            {/* Left Column (8 cols): Title, Subtitle, Context, Pillars */}
+            <div className="lg:col-span-8 space-y-4">
+              <div className="editorial-badge">
+                <Compass size={13} className="text-[#B58B49] dark:text-[#D0AC6C]" />
+                <span>{t('truett.badge')}</span>
+              </div>
+
+              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#1B3B2B] dark:text-[#F3F0E8] leading-tight">
+                {t('truett.title')}
+              </h3>
+
+              <p className="font-mono text-xs uppercase tracking-wider text-[#B58B49] dark:text-[#D0AC6C] font-semibold">
+                {t('truett.subtitle')}
+              </p>
+
+              <p className="text-sm sm:text-base leading-relaxed text-[#252622]/85 dark:text-[#B8B8AE]">
+                {t('truett.body')}
+              </p>
+
+              {/* 3 Support Pillars */}
+              <div className="pt-2 grid gap-3 sm:grid-cols-3">
+                <div className="rounded-lg border border-[#E8E4DC] bg-[#FAF8F5]/80 p-3.5 dark:border-[#2E322C] dark:bg-[#20231F]/80">
+                  <p className="font-serif text-sm font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+                    {t('truett.pillar1.title')}
+                  </p>
+                  <p className="mt-1 text-xs text-[#77766F] dark:text-[#B8B8AE] leading-relaxed">
+                    {t('truett.pillar1.desc')}
+                  </p>
+                </div>
+                <div className="rounded-lg border border-[#E8E4DC] bg-[#FAF8F5]/80 p-3.5 dark:border-[#2E322C] dark:bg-[#20231F]/80">
+                  <p className="font-serif text-sm font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+                    {t('truett.pillar2.title')}
+                  </p>
+                  <p className="mt-1 text-xs text-[#77766F] dark:text-[#B8B8AE] leading-relaxed">
+                    {t('truett.pillar2.desc')}
+                  </p>
+                </div>
+                <div className="rounded-lg border border-[#E8E4DC] bg-[#FAF8F5]/80 p-3.5 dark:border-[#2E322C] dark:bg-[#20231F]/80">
+                  <p className="font-serif text-sm font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+                    {t('truett.pillar3.title')}
+                  </p>
+                  <p className="mt-1 text-xs text-[#77766F] dark:text-[#B8B8AE] leading-relaxed">
+                    {t('truett.pillar3.desc')}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column (4 cols): Direct CTA Panel */}
+            <div className="lg:col-span-4 flex flex-col justify-center items-stretch rounded-xl border border-[#B58B49]/30 bg-[#FAF8F5] p-6 text-center dark:border-[#D0AC6C]/30 dark:bg-[#20231F]">
+              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full border border-[#B58B49]/40 bg-[#FAF8F5] text-[#1B3B2B] dark:border-[#D0AC6C]/40 dark:bg-[#151714] dark:text-[#D0AC6C]">
+                <HeartHandshake size={22} />
+              </div>
+
+              <h4 className="font-serif text-lg font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+                {lang === 'en' ? 'Ministerial Partnership' : 'Parceria Ministerial'}
+              </h4>
+
+              <p className="mt-2 text-xs leading-relaxed text-[#77766F] dark:text-[#B8B8AE]">
+                {lang === 'en'
+                  ? 'Connect directly to receive theological updates, prayer requests, and formal partnership details.'
+                  : 'Entre em contato diretamente para receber boletins do ministério, motivos de oração e detalhes sobre apoio.'}
+              </p>
+
+              <a
+                href="mailto:ramonchrystian@gmail.com?subject=Apoio%20aos%20Estudos%20Teologicos%20-%20Truett%20Seminary%20-%20Ramon%20Chrystian"
+                className="btn-primary mt-5 justify-center w-full"
+              >
+                <Mail size={15} />
+                <span>{t('truett.cta')}</span>
+              </a>
+
+              <span className="mt-3 font-mono text-[10px] text-[#77766F] dark:text-[#B8B8AE]">
+                ramonchrystian@gmail.com
+              </span>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Discreet Subsection: Complementary Studies */}
         <motion.div

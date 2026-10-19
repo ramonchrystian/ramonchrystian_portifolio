@@ -126,23 +126,27 @@ export default function Hero() {
                   <span className="text-[#B58B49] dark:text-[#D0AC6C]">EST. 2010</span>
                 </div>
 
-                {/* Central Emblem & Inscription */}
-                <div className="py-7 text-center">
-                  <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-full border border-[#B58B49]/40 bg-[#FAF8F5] shadow-xs dark:border-[#D0AC6C]/40 dark:bg-[#151714]">
-                    <span className="font-serif text-3xl font-semibold tracking-wider text-[#1B3B2B] dark:text-[#D0AC6C]">
-                      RC
-                    </span>
+                {/* Central Portrait & Inscription */}
+                <div className="py-6 text-center">
+                  <div className="relative mx-auto mb-4 h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-2 border-[#B58B49]/50 shadow-md dark:border-[#D0AC6C]/50">
+                    <img
+                      src="/retrato1.png"
+                      alt="Ramon Chrystian - Ministro de Música"
+                      className="h-full w-full object-cover object-top"
+                    />
                   </div>
 
                   <h2 className="font-serif text-2xl font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
                     Ramon Chrystian
                   </h2>
 
-                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-[#B58B49] dark:text-[#D0AC6C]">
-                    {lang === 'en' ? 'Sacred Music · Ministry Educator' : 'Música Sacra · Educador Ministerial'}
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-[#B58B49] dark:text-[#D0AC6C]">
+                    {lang === 'en'
+                      ? 'Minister of Music · Sacred Music & Theology Candidate'
+                      : 'Ministro de Música · B. Música Sacra & Bacharelando em Teologia'}
                   </p>
 
-                  <p className="mt-4 text-xs italic leading-relaxed text-[#77766F] dark:text-[#B8B8AE] font-serif max-w-[260px] mx-auto">
+                  <p className="mt-3.5 text-xs italic leading-relaxed text-[#77766F] dark:text-[#B8B8AE] font-serif max-w-[280px] mx-auto">
                     {lang === 'en'
                       ? '“Serving the Church through theological depth, musical craftsmanship, and practical innovation.”'
                       : '“Servindo à Igreja por meio da solidez teológica, excelência musical e inovação responsável.”'}
@@ -152,7 +156,7 @@ export default function Hero() {
                 {/* Bottom Verification Seal */}
                 <div className="border-t border-[#E8E4DC] pt-3.5 flex items-center justify-between font-mono text-[10px] text-[#77766F] dark:border-[#2E322C] dark:text-[#B8B8AE]">
                   <span className="text-[#1B3B2B] dark:text-[#72947B] font-semibold">STBSB ALUMNUS</span>
-                  <span>{lang === 'en' ? 'B.Sacred Music' : 'B. Música Sacra'}</span>
+                  <span>{lang === 'en' ? 'B.Sacred Music & Theology' : 'B. Música Sacra & Teologia'}</span>
                 </div>
               </div>
             </div>
@@ -215,7 +219,7 @@ export default function Hero() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href="mailto:hello@ramonchrystian.com?subject=Inquiry%20regarding%20Curriculum%20Vitae%20-%20Ramon%20Chrystian"
+                  href="mailto:ramonchrystian@gmail.com?subject=Inquiry%20regarding%20Curriculum%20Vitae%20-%20Ramon%20Chrystian"
                   className="btn-primary"
                 >
                   <BookOpen size={15} />

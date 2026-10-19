@@ -7,8 +7,8 @@ const verifiedDirectChannels = [
   {
     icon: Mail,
     label: 'Email',
-    handle: 'hello@ramonchrystian.com',
-    url: 'mailto:hello@ramonchrystian.com',
+    handle: 'ramonchrystian@gmail.com',
+    url: 'mailto:ramonchrystian@gmail.com',
   },
   {
     icon: Globe,
@@ -51,7 +51,7 @@ export default function Contact() {
     e.preventDefault()
     const mailtoSubject = encodeURIComponent(`[ramonchrystian.com] ${formData.subject || 'Ministry Inquiry'}`)
     const mailtoBody = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
-    window.location.href = `mailto:hello@ramonchrystian.com?subject=${mailtoSubject}&body=${mailtoBody}`
+    window.location.href = `mailto:ramonchrystian@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
     
     setSubmitted(true)
     setTimeout(() => {

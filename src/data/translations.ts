@@ -63,6 +63,17 @@ export type TranslationKey =
   | 'contact.form.success'
   | 'contact.direct'
   | 'contact.linkedinNote'
+  | 'truett.badge'
+  | 'truett.title'
+  | 'truett.subtitle'
+  | 'truett.body'
+  | 'truett.cta'
+  | 'truett.pillar1.title'
+  | 'truett.pillar1.desc'
+  | 'truett.pillar2.title'
+  | 'truett.pillar2.desc'
+  | 'truett.pillar3.title'
+  | 'truett.pillar3.desc'
   | 'footer.copyright'
   | 'footer.location'
   | 'footer.designedFor'
@@ -96,16 +107,16 @@ const translations: Record<TranslationKey, Record<Lang, string>> = {
   },
 
   'hero.badge': {
-    en: 'Sacred Music & Pastoral Ministry',
-    pt: 'Música Sacra & Ministério Pastoral',
+    en: 'Minister of Music · Sacred Music & Theology Candidate',
+    pt: 'Ministro de Música · Bacharel em Música Sacra e Bacharelando em Teologia',
   },
   'hero.headline': {
     en: 'Serving the Church Through Worship, Teaching, and Digital Innovation.',
     pt: 'Servindo à Igreja por meio da Adoração, do Ensino e da Inovação Digital.',
   },
   'hero.subheadline': {
-    en: 'Brazilian Baptist worship and music leader, Sacred Music graduate, and ministry educator with experience in local-church ministry, worship leadership, team development, teaching, and digital initiatives that serve the Church.',
-    pt: 'Líder batista de música e adoração, bacharel em Música Sacra e educador ministerial, com experiência em ministério de igreja local, liderança musical, formação de equipes, ensino e desenvolvimento de iniciativas digitais a serviço da Igreja.',
+    en: 'Minister of Music, Bachelor of Sacred Music (STBSB) and Bachelor of Theology student, dedicated to pastoral worship leadership, team discipleship, teaching, and thoughtful digital tools that serve the local church.',
+    pt: 'Ministro de Música, Bacharel em Música Sacra (STBSB) e Bacharelando em Teologia, dedicado à condução bíblica do louvor congregacional, discipulado de equipes, ensino e ferramentas digitais a serviço da igreja local.',
   },
   'hero.cta.primary': {
     en: 'Explore My Ministry',
@@ -324,6 +335,51 @@ const translations: Record<TranslationKey, Record<Lang, string>> = {
   'contact.linkedinNote': {
     en: 'Note: LinkedIn profile reflects complementary technical web development background.',
     pt: 'Nota: O perfil no LinkedIn reflete a atuação complementar em desenvolvimento web.',
+  },
+
+  'truett.badge': {
+    en: 'Vocational Horizon & MDiv Program',
+    pt: 'Horizonte Vocacional & Programa MDiv',
+  },
+  'truett.title': {
+    en: 'Support My Theological Studies at Truett Seminary',
+    pt: 'Apoio aos Estudos Teológicos no Truett Seminary',
+  },
+  'truett.subtitle': {
+    en: 'Preparation for the Master of Divinity (MDiv) at George W. Truett Theological Seminary (Baylor University, Texas).',
+    pt: 'Preparação para o Master of Divinity (MDiv) no George W. Truett Theological Seminary (Baylor University, Texas).',
+  },
+  'truett.body': {
+    en: 'To deepen my pastoral, musical, and biblical foundations in sustained service to the Church of Christ, I am preparing for the Master of Divinity (MDiv) program at George W. Truett Theological Seminary (Baylor University, Texas). Churches, pastors, mentors, and brothers and sisters led to walk alongside this ministerial path through prayer, counsel, or scholarship support are warmly invited to connect.',
+    pt: 'Com o propósito de aprofundar minha vocação pastoral e musical para o serviço de longo prazo à Igreja de Cristo, estou em preparação para o programa de Master of Divinity (MDiv) no George W. Truett Theological Seminary (Baylor University, Texas). Igrejas, pastores, mentores e irmãos que desejarem apoiar este projeto ministerial através de oração, aconselhamento ou parceria financeira/bolsa de estudos são calorosamente convidados a caminhar conosco.',
+  },
+  'truett.cta': {
+    en: 'Partner in My Theological Formation',
+    pt: 'Apoiar Meus Estudos Teológicos',
+  },
+  'truett.pillar1.title': {
+    en: 'Prayer & Intercession',
+    pt: 'Oração & Intercessão',
+  },
+  'truett.pillar1.desc': {
+    en: 'Spiritual covering and guidance throughout the preparation, admissions, and seminary journey.',
+    pt: 'Cobertura espiritual e discernimento durante todo o período preparatório e jornada no seminário.',
+  },
+  'truett.pillar2.title': {
+    en: 'Pastoral & Academic Mentorship',
+    pt: 'Mentoria Pastoral & Acadêmica',
+  },
+  'truett.pillar2.desc': {
+    en: 'Dialogues and theological fellowship with experienced pastors, educators, and ministry leaders.',
+    pt: 'Comunhão e aconselhamento teológico com pastores, educadores e lideranças ministeriais experientes.',
+  },
+  'truett.pillar3.title': {
+    en: 'Scholarship & Financial Support',
+    pt: 'Apoio Financeiro & Bolsas de Estudo',
+  },
+  'truett.pillar3.desc': {
+    en: 'Contributions directed toward tuition, seminary fees, and necessary theological research literature.',
+    pt: 'Contribuições para custos de matrícula, anuidade e aquisição de bibliografia teológica essencial.',
   },
 
   'footer.copyright': {

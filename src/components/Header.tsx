@@ -40,8 +40,8 @@ export default function Header() {
           <span className="text-xl sm:text-2xl font-semibold text-[#1B3B2B] dark:text-[#F3F0E8] transition-colors group-hover:text-[#254E39] dark:group-hover:text-[#72947B]">
             Ramon Chrystian
           </span>
-          <span className="font-sans text-[10px] tracking-[0.18em] uppercase text-[#77766F] dark:text-[#B8B8AE]">
-            {lang === 'en' ? 'Sacred Music · Ministry' : 'Música Sacra · Ministério'}
+          <span className="font-sans text-[10px] tracking-[0.16em] uppercase text-[#77766F] dark:text-[#B8B8AE]">
+            {lang === 'en' ? 'Minister of Music · Sacred Music & Theology' : 'Ministro de Música · Música Sacra e Teologia'}
           </span>
         </a>
 

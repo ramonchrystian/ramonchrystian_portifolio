@@ -235,34 +235,39 @@ Apresentação biográfica concisa em três parágrafos articulados, seguida de 
 5. **Igreja Batista Itacuruçá — Tijuca, RJ (2011 — 2013)**
    * *Cargo:* Ministro de Música e Adoração (Tempo Integral — Consagração Ministerial).
    * *Responsabilidades:* Igreja histórica na denominação batista onde foi solenemente consagrado ao Santo Ministério da Música; atuação como Ministro de Música em tempo integral, liderando liturgias solenes e o canto congregacional; regência e ensaios com coros, grupos vocais e acompanhamento de equipes instrumentais; direção de cantatas e programas especiais de Páscoa e Natal com repertório sacro e orquestral; supervisão técnica de sonorização, gravações de cultos e equipe de projeção litúrgica.
-   * *Destaques Ministeriais:* Consagração e ordenação oficial ao Ministério Pastoral da Música Sacra; condução fiel do patrimônio hinológico histórico articulado à sensibilidade litúrgica contemporânea.
+   #### Gravações e Produções Verificadas em Vídeo
+* **Musical de Natal: E o Tempo se Cumpriu**
+  * *YouTube:* `https://www.youtube.com/watch?v=A016YqotIWc&t=2623s` (Início em 43:43)
+  * *Contexto:* Direção e produção geral de musical com coro, solistas e banda ao vivo, realizado com sensibilidade estética durante reforma acústica e iluminação intimista no templo.
 
 ---
 
 ### 4.5 Ensino, Workshops e Publicações (Section: `#teaching`)
 
 #### Síntese de Formação
-* **Dozens+ Workshops Práticos:** Ministrados em igrejas batistas, convenções regionais e encontros de música.
-* **Ementa Central:** Teologia da adoração, hinódia, dinâmica de banda, método de ensaio e ética pastoral.
+* **Workshops Práticos & Clínicas:** Ministrados intensivamente em igrejas batistas, convenções e congressos de associações de músicos.
+* **Ementa Central:** Prática de banda, dinâmica de ensaio, improvisação instrumental, teologia da adoração e consultoria ministerial.
 * **Formação de Lideranças:** Capacitação de voluntários locais para aliar caráter pastoral a rigor técnico.
 
 #### Workshops Representativos Selecionados
-1. **Liderança de Louvor & Canto Congregacional: Fundamentos Teológicos e Prática Musical (2024)**
-   * *Evento:* Congresso de Música e Adoração.
-   * *Instituição:* Primeira Igreja Batista em Bangu (Rio de Janeiro, RJ).
-   * *Tipo:* Workshop / Oficina.
-2. **Formação de Equipes e Caráter Pastoral em Ministérios de Louvor (2023)**
-   * *Evento:* Conferência Regional de Líderes de Louvor.
-   * *Instituição:* Convenção Batista Carioca / Fluminense (Rio de Janeiro, RJ).
-   * *Tipo:* Workshop / Oficina.
-3. **Arranjo Musical, Dinâmica e Metodologia de Ensaio para Bandas de Igreja (2023)**
-   * *Evento:* Capacitação Contínua de Ministérios de Música.
-   * *Instituição:* Igreja Batista de Marechal Hermes (Rio de Janeiro, RJ).
-   * *Tipo:* Treinamento Prático.
-4. **Liturgia e Ordem de Culto: Integrando as Escrituras, a Oração e o Canto (2022)**
-   * *Evento:* Seminário de Liderança de Culto.
-   * *Instituição:* Associação de Líderes e Pastores Batistas (Rio de Janeiro, RJ).
-   * *Tipo:* Palestra Magna.
+1. **Workshop de Prática de Banda — Congresso Conecte (Nov 2026)**
+   * *Instituição:* Primeira Igreja Batista de Madureira (Rio de Janeiro, RJ).
+2. **Workshop de Prática de Banda e Coordenação Instrumental (Nov 2026)**
+   * *Instituição:* Primeira Igreja Batista do Lins (Rio de Janeiro, RJ).
+3. **Improvisação Instrumental para Músicos de Igreja (Out 2026)**
+   * *Instituição:* Associação dos Músicos Batistas Fluminenses — AMBF (Rio Bonito, RJ).
+4. **Consultoria Ministerial: Dimensões Essenciais no Ministério de Adoração (Set 2026)**
+   * *Instituição:* Parceria com o Seminário Teológico Batista do Sul do Brasil (STBSB / FABAT) na Igreja Batista Parque Curicica (Rio de Janeiro, RJ).
+5. **Workshop de Prática de Banda — Congresso da AMBC (Ago 2026)**
+   * *Instituição:* Associação dos Músicos Batistas Cariocas — AMBC (Rio de Janeiro, RJ).
+6. **Workshop de Prática de Banda e Dinâmica de Ensaio (Jun 2026)**
+   * *Instituição:* Segunda Igreja Batista de Petrópolis (Petrópolis, RJ).
+7. **Palestra: Unidade, Serviço e Adoração (Mai 2026)**
+   * *Instituição:* Igreja Batista Memorial de Jacarepaguá (Rio de Janeiro, RJ).
+8. **Workshop de Prática de Banda — Adore Minas (Abr 2026)**
+   * *Instituição:* Associação dos Músicos Batistas de Minas Gerais — AMBMG (Minas Gerais).
+9. **Guitarrista Sideman com Pr. Fabiano Alves / Vineyard Brasil (Abr 2026)**
+   * *Instituição:* Adore Minas — AMBMG / Vineyard Music Brasil (Minas Gerais).
 
 #### Publicações Editoriais (Ensaios do Letra Sonora)
 1. **O Silêncio que Canta: Recuperando o Repouso Sagrado na Liturgia Moderna**

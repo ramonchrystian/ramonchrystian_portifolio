@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Music, Users, Sliders, Calendar, ChevronRight, Church } from 'lucide-react'
+import { Music, Users, Sliders, Calendar, ChevronRight, Church, Play } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
 import { ministryExperiences } from '../data/ministryExperiences'
 import { videos } from '../data/videos'
@@ -215,22 +215,42 @@ export default function Ministry() {
               </p>
             </motion.div>
 
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
               {verifiedVideos.map((video) => (
                 <a
                   key={video.id}
-                  href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
+                  href={video.startTime ? `https://www.youtube.com/watch?v=${video.youtubeId}&t=${video.startTime}s` : `https://www.youtube.com/watch?v=${video.youtubeId}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#FAF8F5] transition-all duration-200 hover:border-[#B58B49]/40 dark:border-[#2E322C] dark:bg-[#20231F]"
+                  className="group block overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#FAF8F5] transition-all duration-200 hover:border-[#B58B49]/40 hover:shadow-md dark:border-[#2E322C] dark:bg-[#20231F]"
                 >
-                  <div className="aspect-video bg-[#E8E4DC]/40 flex items-center justify-center dark:bg-[#151714]">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E8E4DC] bg-[#FAF8F5] text-[#1B3B2B] dark:border-[#2E322C] dark:bg-[#20231F] dark:text-[#72947B] transition-transform duration-200 group-hover:scale-105">
-                      <Music size={20} />
+                  <div className="relative aspect-video bg-[#151714] overflow-hidden">
+                    <img
+                      src={`https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`}
+                      alt={video.title[lang]}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-90"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/35 flex items-center justify-center transition-colors group-hover:bg-black/20">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#FAF8F5]/90 text-[#1B3B2B] shadow-lg backdrop-blur-xs transition-transform group-hover:scale-110 dark:bg-[#151714]/90 dark:text-[#D0AC6C]">
+                        <Play size={22} className="ml-0.5 fill-current" />
+                      </div>
                     </div>
+                    {video.startTime && (
+                      <span className="absolute bottom-3 right-3 rounded-md bg-black/80 px-2 py-0.5 font-mono text-[11px] text-white">
+                        {lang === 'en' ? 'Starts at 43:43' : 'Início em 43:43'}
+                      </span>
+                    )}
                   </div>
                   <div className="p-5">
-                    <h4 className="font-serif text-lg font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+                    <div className="flex flex-wrap gap-1.5 mb-2.5">
+                      {video.tags.map((tag) => (
+                        <span key={tag} className="tag-pill text-[10px]">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h4 className="font-serif text-lg sm:text-xl font-semibold text-[#1B3B2B] dark:text-[#F3F0E8] group-hover:text-[#254E39] dark:group-hover:text-[#72947B] transition-colors">
                       {video.title[lang]}
                     </h4>
                     <p className="mt-2 text-xs sm:text-sm leading-relaxed text-[#77766F] dark:text-[#B8B8AE]">

@@ -2,63 +2,18 @@ import type { VideoProject } from '../types'
 
 export const videos: VideoProject[] = [
   {
-    id: 'live-worship-1',
+    id: 'musical-natal-tempo-se-cumpriu',
     title: {
-      en: 'Worship Night — Congregational Singing',
-      pt: 'Noite de Louvor — Canto Congregacional',
+      en: 'Christmas Musical: E o Tempo se Cumpriu (When the Time Was Fulfilled)',
+      pt: 'Musical de Natal: E o Tempo se Cumpriu',
     },
     description: {
-      en: 'Leading congregational worship in a live setting, focusing on theological depth and musical excellence.',
-      pt: 'Liderando o louvor congregacional ao vivo, com foco em profundidade teológica e excelência musical.',
+      en: 'General musical direction and production of the Christmas cantata featuring choir, soloists, and live worship band. Staged during the church sanctuary acoustic renovation with intimate stage lighting.',
+      pt: 'Produção e direção musical geral do musical de Natal com coro, solistas e banda de adoração. Realizado durante a reforma acústica do templo com iluminação cênica intimista.',
     },
-    youtubeId: 'dQw4w9WgXcQ',
-    thumbnailUrl: '',
-    tags: ['Worship', 'Live', 'Congregational'],
-    pillar: 'worship',
-  },
-  {
-    id: 'guitar-session-1',
-    title: {
-      en: 'Guitar Arrangement — Instrumental',
-      pt: 'Arranjo de Guitarra — Instrumental',
-    },
-    description: {
-      en: 'Original instrumental guitar arrangement blending Brazilian and contemporary worship aesthetics.',
-      pt: 'Arranjo instrumental original de guitarra mesclando estética brasileira e adoração contemporânea.',
-    },
-    youtubeId: 'dQw4w9WgXcQ',
-    thumbnailUrl: '',
-    tags: ['Guitar', 'Instrumental', 'Arrangement'],
-    pillar: 'session',
-  },
-  {
-    id: 'choir-direction-1',
-    title: {
-      en: 'Choir Rehearsal — Vocal Direction',
-      pt: 'Ensaio Coral — Direção Vocal',
-    },
-    description: {
-      en: 'Directing a church choir through vocal warm-ups, part separation, and liturgical preparation.',
-      pt: 'Dirigindo um coral de igreja em aquecimento vocal, separação de vozes e preparação litúrgica.',
-    },
-    youtubeId: 'dQw4w9WgXcQ',
-    thumbnailUrl: '',
-    tags: ['Choir', 'Direction', 'Vocal'],
+    youtubeId: 'A016YqotIWc',
+    startTime: 2623,
+    tags: ['Musical de Natal', 'Coro & Banda', 'Direção Musical', 'Cantata'],
     pillar: 'direction',
-  },
-  {
-    id: 'live-worship-2',
-    title: {
-      en: 'Sunday Morning — Worship Set',
-      pt: 'Domingo de Manhã — Hinário de Louvor',
-    },
-    description: {
-      en: 'Full worship set leading the congregation through hymns and contemporary songs.',
-      pt: 'Sequência completa de louvor guiando a congregação através de hinos e canções contemporâneas.',
-    },
-    youtubeId: 'dQw4w9WgXcQ',
-    thumbnailUrl: '',
-    tags: ['Worship', 'Sunday Service', 'Hymns'],
-    pillar: 'worship',
   },
 ]

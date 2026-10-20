@@ -127,7 +127,7 @@ export default function Teaching() {
                       </span>
                       <span className="flex items-center gap-1 font-mono text-xs text-[#77766F] dark:text-[#B8B8AE]">
                         <Calendar size={11} />
-                        {w.year}
+                        {typeof w.year === 'string' ? w.year : w.year[lang]}
                       </span>
                     </div>
 

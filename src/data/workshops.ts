@@ -2,75 +2,192 @@ import type { Workshop } from '../types'
 
 export const workshops: Workshop[] = [
   {
-    id: 'workshop-1',
+    id: 'pratica-banda-conecte-madureira',
     title: {
-      en: 'Worship Leadership & Congregational Singing: Theological Foundations and Musical Practice',
-      pt: 'Liderança de Louvor & Canto Congregacional: Fundamentos Teológicos e Prática Musical',
+      en: 'Band Practice & Rehearsal Dynamics Workshop',
+      pt: 'Workshop de Prática de Banda',
     },
     event: {
-      en: 'Music and Worship Congress',
-      pt: 'Congresso de Música e Adoração',
+      en: 'Conecte Congress',
+      pt: 'Congresso Conecte',
     },
     institution: {
-      en: 'First Baptist Church of Bangu',
-      pt: 'Primeira Igreja Batista em Bangu',
+      en: 'First Baptist Church of Madureira',
+      pt: 'Primeira Igreja Batista de Madureira',
     },
     city: 'Rio de Janeiro',
-    year: '2024',
+    year: {
+      en: 'Nov 2026',
+      pt: 'Nov 2026',
+    },
     type: 'workshop',
   },
   {
-    id: 'workshop-2',
+    id: 'pratica-banda-pib-lins',
     title: {
-      en: 'Team Building and Pastoral Character in Worship Ministries',
-      pt: 'Formação de Equipes e Caráter Pastoral em Ministérios de Louvor',
+      en: 'Band Practice & Instrumental Coordination Clinic',
+      pt: 'Workshop de Prática de Banda',
     },
     event: {
-      en: 'Worship Leaders Regional Conference',
-      pt: 'Conferência Regional de Líderes de Louvor',
+      en: 'Music Ministry Equipping Weekend',
+      pt: 'Capacitação Ministerial de Louvor',
     },
     institution: {
-      en: 'Rio de Janeiro Baptist Convention',
-      pt: 'Convenção Batista Carioca / Fluminense',
+      en: 'First Baptist Church of Lins de Vasconcelos',
+      pt: 'Primeira Igreja Batista do Lins',
     },
     city: 'Rio de Janeiro',
-    year: '2023',
+    year: {
+      en: 'Nov 2026',
+      pt: 'Nov 2026',
+    },
     type: 'workshop',
   },
   {
-    id: 'workshop-3',
+    id: 'improvisacao-ambf-rio-bonito',
     title: {
-      en: 'Musical Arrangement, Dynamics, and Rehearsal Methodology for Church Bands',
-      pt: 'Arranjo Musical, Dinâmica e Metodologia de Ensaio para Bandas de Igreja',
+      en: 'Instrumental Improvisation & Harmony for Church Musicians',
+      pt: 'Improvisação Instrumental para Músicos de Igreja',
     },
     event: {
-      en: 'Music Ministry Training Program',
-      pt: 'Capacitação Contínua de Ministérios de Música',
+      en: 'Regional Musicians Gathering — AMBF',
+      pt: 'Encontro da Associação dos Músicos Batistas Fluminenses (AMBF)',
     },
     institution: {
-      en: 'First Baptist Church of Marechal Hermes',
-      pt: 'Igreja Batista de Marechal Hermes',
+      en: 'Baptist Association of Rio Bonito & Fluminense Region',
+      pt: 'Associação dos Músicos Batistas Fluminenses (AMBF)',
     },
-    city: 'Rio de Janeiro',
-    year: '2023',
+    city: 'Rio Bonito, RJ',
+    year: {
+      en: 'Oct 2026',
+      pt: 'Out 2026',
+    },
     type: 'training',
   },
   {
-    id: 'workshop-4',
+    id: 'consultoria-stbsb-fabat-curicica',
     title: {
-      en: 'Liturgy and Order of Worship: Integrating Scripture, Prayer, and Song',
-      pt: 'Liturgia e Ordem de Culto: Integrando as Escrituras, a Oração e o Canto',
+      en: 'Ministerial Consulting: Essential Dimensions in Worship Ministry',
+      pt: 'Consultoria Ministerial: Dimensões Essenciais no Ministério de Adoração',
     },
     event: {
-      en: 'Church Leadership Seminar',
-      pt: 'Seminário de Liderança de Culto',
+      en: 'In partnership with South Brazil Baptist Theological Seminary (STBSB / FABAT)',
+      pt: 'Em parceria com o Seminário Teológico Batista do Sul do Brasil (STBSB / FABAT)',
     },
     institution: {
-      en: 'Baptist Pastoral Association',
-      pt: 'Associação de Líderes e Pastores Batistas',
+      en: 'Curicica Park Baptist Church',
+      pt: 'Igreja Batista Parque Curicica',
     },
     city: 'Rio de Janeiro',
-    year: '2022',
+    year: {
+      en: 'Sep 2026',
+      pt: 'Set 2026',
+    },
     type: 'lecture',
+  },
+  {
+    id: 'pratica-banda-ambc-rio',
+    title: {
+      en: 'Band Practice & Ensemble Workshop',
+      pt: 'Workshop de Prática de Banda',
+    },
+    event: {
+      en: 'Carioca Baptist Musicians Association Annual Congress (AMBC)',
+      pt: 'Congresso da Associação dos Músicos Batistas Cariocas (AMBC)',
+    },
+    institution: {
+      en: 'Carioca Baptist Musicians Association (AMBC)',
+      pt: 'Associação dos Músicos Batistas Cariocas (AMBC)',
+    },
+    city: 'Rio de Janeiro',
+    year: {
+      en: 'Aug 2026',
+      pt: 'Ago 2026',
+    },
+    type: 'workshop',
+  },
+  {
+    id: 'pratica-banda-sib-petropolis',
+    title: {
+      en: 'Band Practice, Dynamics & Rhythm Section Rehearsal',
+      pt: 'Workshop de Prática de Banda e Dinâmica de Ensaio',
+    },
+    event: {
+      en: 'Church Music Equipping Clinic',
+      pt: 'Capacitação da Equipe de Louvor e Adoração',
+    },
+    institution: {
+      en: 'Second Baptist Church of Petrópolis',
+      pt: 'Segunda Igreja Batista de Petrópolis',
+    },
+    city: 'Petrópolis, RJ',
+    year: {
+      en: 'Jun 2026',
+      pt: 'Jun 2026',
+    },
+    type: 'workshop',
+  },
+  {
+    id: 'palestra-unidade-servico-jacarepagua',
+    title: {
+      en: 'Unity, Service, and Pastoral Worship',
+      pt: 'Palestra: Unidade, Serviço e Adoração',
+    },
+    event: {
+      en: 'Worship Leaders & Servant Ministers Retreat',
+      pt: 'Encontro de Capacitação de Liderança de Louvor',
+    },
+    institution: {
+      en: 'Memorial Baptist Church of Jacarepaguá',
+      pt: 'Igreja Batista Memorial de Jacarepaguá',
+    },
+    city: 'Rio de Janeiro',
+    year: {
+      en: 'May 2026',
+      pt: 'Mai 2026',
+    },
+    type: 'lecture',
+  },
+  {
+    id: 'pratica-banda-adore-minas',
+    title: {
+      en: 'Band Practice & Congregational Accompaniment',
+      pt: 'Workshop de Prática de Banda',
+    },
+    event: {
+      en: 'Adore Minas — AMBMG Baptist Musicians Congress',
+      pt: 'Adore Minas — Congresso da AMBMG (Associação dos Músicos Batistas de MG)',
+    },
+    institution: {
+      en: 'Minas Gerais Baptist Musicians Association (AMBMG)',
+      pt: 'Associação dos Músicos Batistas de Minas Gerais (AMBMG)',
+    },
+    city: 'Minas Gerais',
+    year: {
+      en: 'Apr 2026',
+      pt: 'Abr 2026',
+    },
+    type: 'workshop',
+  },
+  {
+    id: 'sideman-fabiano-alves-adore-minas',
+    title: {
+      en: 'Guitar Sideman with Pastor Fabiano Alves (Vineyard Brasil)',
+      pt: 'Guitarrista Sideman com Pr. Fabiano Alves (Vineyard Brasil)',
+    },
+    event: {
+      en: 'Adore Minas — AMBMG Baptist Musicians Congress',
+      pt: 'Adore Minas — Congresso da AMBMG (Associação dos Músicos Batistas de MG)',
+    },
+    institution: {
+      en: 'Vineyard Music Brasil / AMBMG',
+      pt: 'Vineyard Brasil / AMBMG',
+    },
+    city: 'Minas Gerais',
+    year: {
+      en: 'Apr 2026',
+      pt: 'Abr 2026',
+    },
+    type: 'training',
   },
 ]

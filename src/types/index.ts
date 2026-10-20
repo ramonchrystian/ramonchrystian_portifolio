@@ -10,6 +10,7 @@ export interface VideoProject {
   thumbnailUrl?: string
   tags: string[]
   pillar: 'worship' | 'direction' | 'session'
+  startTime?: number
 }
 
 export interface Article {
@@ -55,7 +56,7 @@ export interface Workshop {
   event: Record<Lang, string>
   institution: Record<Lang, string>
   city: string
-  year: string
+  year: string | Record<Lang, string>
   type: 'workshop' | 'lecture' | 'class' | 'training'
   url?: string
 }

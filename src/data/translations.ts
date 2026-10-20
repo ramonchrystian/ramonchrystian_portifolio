@@ -72,8 +72,6 @@ export type TranslationKey =
   | 'truett.pillar1.desc'
   | 'truett.pillar2.title'
   | 'truett.pillar2.desc'
-  | 'truett.pillar3.title'
-  | 'truett.pillar3.desc'
   | 'footer.copyright'
   | 'footer.location'
   | 'footer.designedFor'
@@ -350,8 +348,8 @@ const translations: Record<TranslationKey, Record<Lang, string>> = {
     pt: 'Preparação para o Master of Divinity (MDiv) no George W. Truett Theological Seminary (Baylor University, Texas).',
   },
   'truett.body': {
-    en: 'To deepen my pastoral, musical, and biblical foundations in sustained service to the Church of Christ, I am preparing for the Master of Divinity (MDiv) program at George W. Truett Theological Seminary (Baylor University, Texas). Churches, pastors, mentors, and brothers and sisters led to walk alongside this ministerial path through prayer, counsel, or scholarship support are warmly invited to connect.',
-    pt: 'Com o propósito de aprofundar minha vocação pastoral e musical para o serviço de longo prazo à Igreja de Cristo, estou em preparação para o programa de Master of Divinity (MDiv) no George W. Truett Theological Seminary (Baylor University, Texas). Igrejas, pastores, mentores e irmãos que desejarem apoiar este projeto ministerial através de oração, aconselhamento ou parceria financeira/bolsa de estudos são calorosamente convidados a caminhar conosco.',
+    en: 'To deepen my pastoral, musical, and biblical foundations in sustained service to the Church of Christ, I am preparing for the Master of Divinity (MDiv) program at George W. Truett Theological Seminary (Baylor University, Texas). Churches, pastors, and brothers and sisters led to walk alongside this ministerial path through prayer or scholarship support are warmly invited to connect.',
+    pt: 'Com o propósito de aprofundar minha vocação pastoral e musical para o serviço de longo prazo à Igreja de Cristo, estou em preparação para o programa de Master of Divinity (MDiv) no George W. Truett Theological Seminary (Baylor University, Texas). Igrejas, pastores e irmãos que desejarem apoiar este projeto ministerial através de oração ou parceria financeira/bolsa de estudos são calorosamente convidados a caminhar conosco.',
   },
   'truett.cta': {
     en: 'Partner in My Theological Formation',
@@ -366,18 +364,10 @@ const translations: Record<TranslationKey, Record<Lang, string>> = {
     pt: 'Cobertura espiritual e discernimento durante todo o período preparatório e jornada no seminário.',
   },
   'truett.pillar2.title': {
-    en: 'Pastoral & Academic Mentorship',
-    pt: 'Mentoria Pastoral & Acadêmica',
-  },
-  'truett.pillar2.desc': {
-    en: 'Dialogues and theological fellowship with experienced pastors, educators, and ministry leaders.',
-    pt: 'Comunhão e aconselhamento teológico com pastores, educadores e lideranças ministeriais experientes.',
-  },
-  'truett.pillar3.title': {
     en: 'Scholarship & Financial Support',
     pt: 'Apoio Financeiro & Bolsas de Estudo',
   },
-  'truett.pillar3.desc': {
+  'truett.pillar2.desc': {
     en: 'Contributions directed toward tuition, seminary fees, and necessary theological research literature.',
     pt: 'Contribuições para custos de matrícula, anuidade e aquisição de bibliografia teológica essencial.',
   },

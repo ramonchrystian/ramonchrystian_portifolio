@@ -215,19 +215,27 @@ Apresentação biográfica concisa em três parágrafos articulados, seguida de 
 3. **Arranjos & Produção Litúrgica:**
    * *Descrição:* Elaboração de arranjos sob medida para banda e vozes, sensibilidade dinâmica na guitarra e uso criterioso de tecnologia de áudio para servir ao culto.
 
-#### Trajetória Documentada na Igreja Local (Linha do Tempo)
-1. **Igreja Batista de Marechal Hermes (2018 — Presente)**
-   * *Cargo:* Líder de Louvor & Diretor Musical.
-   * *Responsabilidades:* Liderança do planejamento litúrgico e musical para cultos dominicais em alinhamento pastoral; direção de bandas de louvor e grupos vocais; elaboração de arranjos vocais e instrumentais para canto congregacional; mentoria de novos líderes e disciplina de ensaios.
-   * *Destaques Ministeriais:* Revitalização da hinódia congregacional integrada a arranjos contemporâneos; criação de oficinas periódicas de capacitação ministerial e discipulado da equipe de música.
-2. **Primeira Igreja Batista em Vicente de Carvalho (2015 — 2018)**
-   * *Cargo:* Diretor Musical & Líder de Louvor.
-   * *Responsabilidades:* Direção do ministério de música e adoração; regência e preparação vocal do coro e equipes com ênfase na clareza teológica; produção e coordenação de celebrações de Páscoa e Natal integrando coro, congregação e juventude; estruturação de cronogramas e materiais musicais.
-   * *Destaques Ministeriais:* Fortalecimento da coesão vocal e compromisso voluntário; ampliação da participação intergeracional na música congregacional.
-3. **Primeira Igreja Batista em Bangu (2010 — 2015)**
-   * *Cargo:* Líder de Louvor & Guitarrista.
-   * *Responsabilidades:* Liderança de bandas de louvor para cultos dominicais, encontros de jovens e evangelismo; guitarrista principal moldando dinâmica e timbres para o culto; participação na seleção temática de repertório; capacitação de novos instrumentistas.
-   * *Destaques Ministeriais:* Papel ativo na expansão musical da juventude; treinamento de instrumentistas que hoje servem em diversas comunidades.
+#### Trajetória Documentada na Igreja Local (Ministério Integral Full-Time)
+1. **Primeira Igreja Batista de Moça Bonita (2024 — Atual)**
+   * *Cargo:* Ministro de Música e Adoração (Tempo Integral).
+   * *Responsabilidades:* Direção pastoral e musical em tempo integral do louvor congregacional e planejamento litúrgico; liderança e desenvolvimento de coros, grupos vocais e bandas de adoração (worship teams); supervisão técnica, treinamento e alinhamento das equipes de áudio/som, multimídia e projeção litúrgica; concepção e planejamento de celebrações sazonais integrando arte, música e comunicação.
+   * *Destaques Ministeriais:* Integração pastoral e técnica entre instrumentistas, cantores e equipes de apoio e transmissão; renovação do repertório congregacional com ênfase em solidez bíblica e excelência musical.
+2. **Terceira Igreja Batista de Cabo Frio (2021 — 2024)**
+   * *Cargo:* Ministro de Música e Adoração (Tempo Integral).
+   * *Responsabilidades:* Liderança pastoral e musical de tempo integral da adoração comunitária e cultos regulares; regência e preparação vocal de coros, grupos vocais e múltiplos worship teams; direção executiva e musical de grandes projetos de Natal e Páscoa articulando Coros, Orquestra, Teatro e Dança; gestão técnica e capacitação contínua de voluntários de sonorização, iluminação, multimídia e projeção.
+   * *Destaques Ministeriais:* Realização de expressivas cantatas de Páscoa e Natal integrando orquestra ao vivo, coro, teatro e dança; consolidação do discipulado e capacitação técnica dos voluntários de som e projeção.
+3. **Segunda Igreja Batista de Duque de Caxias (2015 — 2021)**
+   * *Cargo:* Ministro de Música e Adoração (Tempo Integral — 6 anos de ministério dedicado).
+   * *Responsabilidades:* Seis anos de ministério pastoral de tempo integral conduzindo a música, liturgia e equipes de louvor; regência de coros adultos, grupos vocais e direção musical de bandas contemporâneas; direção e docência na Escola de Música da igreja, capacitando novos instrumentistas e vocalistas para o ministério; produção geral de grandes cantatas de Páscoa e Natal integrando coro, orquestra, teatro, dança e artes visuais; estruturação de mesas de som, monitoramento de palco, acústica e fluxo de multimídia e projeção.
+   * *Destaques Ministeriais:* Forte impacto pedagógico por meio da Escola de Música, formando dezenas de músicos para a igreja local; temporadas históricas de celebrações de Páscoa e Natal com coro e orquestra sinfônica ao vivo.
+4. **Segunda Igreja Batista de Barra do Piraí (2013 — 2015)**
+   * *Cargo:* Ministro de Música e Adoração (Tempo Integral).
+   * *Responsabilidades:* Liderança ministerial em tempo integral do canto congregacional, liturgia e ministérios artísticos; regência e preparação vocal de coros, conjuntos vocais e bandas de adoração; concepção e direção musical de cantatas sazonais de Natal e Páscoa integrando teatro, dança e música; reestruturação dos sistemas de som, acústica do templo e operação de multimídia e projeção.
+   * *Destaques Ministeriais:* Articulação expressiva de teatro, dança e canto coral nas celebrações pascais e natalinas; capacitação prática de jovens instrumentistas e operadores da equipe de som e projeção.
+5. **Igreja Batista Itacuruçá — Tijuca, RJ (2011 — 2013)**
+   * *Cargo:* Ministro de Música e Adoração (Tempo Integral — Consagração Ministerial).
+   * *Responsabilidades:* Igreja histórica na denominação batista onde foi solenemente consagrado ao Santo Ministério da Música; atuação como Ministro de Música em tempo integral, liderando liturgias solenes e o canto congregacional; regência e ensaios com coros, grupos vocais e acompanhamento de equipes instrumentais; direção de cantatas e programas especiais de Páscoa e Natal com repertório sacro e orquestral; supervisão técnica de sonorização, gravações de cultos e equipe de projeção litúrgica.
+   * *Destaques Ministeriais:* Consagração e ordenação oficial ao Ministério Pastoral da Música Sacra; condução fiel do patrimônio hinológico histórico articulado à sensibilidade litúrgica contemporânea.
 
 ---
 
@@ -285,10 +293,9 @@ Apresentação transparente e documentada sem atribuição de falsas equivalênc
 
 #### Horizonte Vocacional & Estudos Teológicos no Truett Seminary (Baylor University, TX)
 * **Destaque:** Cartão nobre de apoio e parceria vocacional para o programa de Master of Divinity (MDiv) no George W. Truett Theological Seminary (Waco, Texas).
-* **3 Pilares de Apoio:**
-  1. *Oração & Intercessão:* Cobertura espiritual e discernimento durante todo o período preparatório.
-  2. *Mentoria Pastoral & Acadêmica:* Comunhão e aconselhamento teológico com docentes e pastores experientes.
-  3. *Apoio Financeiro & Bolsas:* Contribuições e parcerias para anuidade, taxas de seminário e bibliografia teológica.
+* **2 Pilares de Apoio:**
+  1. *Oração & Intercessão:* Cobertura espiritual e discernimento durante todo o período preparatório e jornada no seminário.
+  2. *Apoio Financeiro & Bolsas:* Contribuições e parcerias para anuidade, taxas de seminário e bibliografia teológica.
 * **Ação Direta:** Botão de conexão pastoral direta via `ramonchrystian@gmail.com`.
 
 ---

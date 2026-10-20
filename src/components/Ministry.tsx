@@ -157,7 +157,7 @@ export default function Ministry() {
                       </p>
                     </div>
                     <span className="tag-pill self-start sm:self-auto">
-                      {exp.period}
+                      {typeof exp.period === 'string' ? exp.period : exp.period[lang]}
                     </span>
                   </div>
 

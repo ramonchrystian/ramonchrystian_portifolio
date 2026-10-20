@@ -44,7 +44,7 @@ export interface MinistryExperience {
   id: string
   church: Record<Lang, string>
   role: Record<Lang, string>
-  period: string
+  period: string | Record<Lang, string>
   responsibilities: Record<Lang, string[]>
   highlights?: Record<Lang, string[]>
 }

@@ -126,30 +126,22 @@ export default function Academic() {
                 {t('truett.body')}
               </p>
 
-              {/* 3 Support Pillars */}
-              <div className="pt-2 grid gap-3 sm:grid-cols-3">
-                <div className="rounded-lg border border-[#E8E4DC] bg-[#FAF8F5]/80 p-3.5 dark:border-[#2E322C] dark:bg-[#20231F]/80">
-                  <p className="font-serif text-sm font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+              {/* 2 Support Pillars */}
+              <div className="pt-2 grid gap-3.5 sm:grid-cols-2">
+                <div className="rounded-lg border border-[#E8E4DC] bg-[#FAF8F5]/80 p-4 dark:border-[#2E322C] dark:bg-[#20231F]/80">
+                  <p className="font-serif text-sm sm:text-base font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
                     {t('truett.pillar1.title')}
                   </p>
-                  <p className="mt-1 text-xs text-[#77766F] dark:text-[#B8B8AE] leading-relaxed">
+                  <p className="mt-1.5 text-xs text-[#77766F] dark:text-[#B8B8AE] leading-relaxed">
                     {t('truett.pillar1.desc')}
                   </p>
                 </div>
-                <div className="rounded-lg border border-[#E8E4DC] bg-[#FAF8F5]/80 p-3.5 dark:border-[#2E322C] dark:bg-[#20231F]/80">
-                  <p className="font-serif text-sm font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+                <div className="rounded-lg border border-[#E8E4DC] bg-[#FAF8F5]/80 p-4 dark:border-[#2E322C] dark:bg-[#20231F]/80">
+                  <p className="font-serif text-sm sm:text-base font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
                     {t('truett.pillar2.title')}
                   </p>
-                  <p className="mt-1 text-xs text-[#77766F] dark:text-[#B8B8AE] leading-relaxed">
+                  <p className="mt-1.5 text-xs text-[#77766F] dark:text-[#B8B8AE] leading-relaxed">
                     {t('truett.pillar2.desc')}
-                  </p>
-                </div>
-                <div className="rounded-lg border border-[#E8E4DC] bg-[#FAF8F5]/80 p-3.5 dark:border-[#2E322C] dark:bg-[#20231F]/80">
-                  <p className="font-serif text-sm font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
-                    {t('truett.pillar3.title')}
-                  </p>
-                  <p className="mt-1 text-xs text-[#77766F] dark:text-[#B8B8AE] leading-relaxed">
-                    {t('truett.pillar3.desc')}
                   </p>
                 </div>
               </div>

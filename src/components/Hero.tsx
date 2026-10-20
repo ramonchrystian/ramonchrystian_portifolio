@@ -123,7 +123,7 @@ export default function Hero() {
                 {/* Top Folio Header */}
                 <div className="flex items-center justify-between border-b border-[#E8E4DC] pb-3 font-mono text-[11px] text-[#77766F] dark:border-[#2E322C] dark:text-[#B8B8AE]">
                   <span>RIO DE JANEIRO, BR</span>
-                  <span className="text-[#B58B49] dark:text-[#D0AC6C]">EST. 2010</span>
+                  <span className="text-[#B58B49] dark:text-[#D0AC6C]">EST. 2011</span>
                 </div>
 
                 {/* Central Portrait & Inscription */}

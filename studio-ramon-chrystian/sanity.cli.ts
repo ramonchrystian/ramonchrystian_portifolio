@@ -5,5 +5,6 @@ export default defineCliConfig({
     projectId: 'ankkhvgz',
     dataset: 'production',
   },
+  studioHost: 'ramonchrystian',
   autoUpdates: true,
 })

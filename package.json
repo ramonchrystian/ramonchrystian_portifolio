@@ -7,9 +7,14 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "studio:dev": "npm --prefix studio-ramon-chrystian run dev",
+    "studio:build": "npm --prefix studio-ramon-chrystian run build",
+    "studio:deploy": "npm --prefix studio-ramon-chrystian run deploy"
   },
   "dependencies": {
+    "@sanity/client": "^8.10.0",
+    "@sanity/image-url": "^2.1.1",
     "framer-motion": "^14.4.0",
     "lucide-react": "^1.59.0",
     "react": "^19.3.1",

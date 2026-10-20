@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion'
 import { BookOpen, MapPin, Calendar, ExternalLink, GraduationCap, FileText } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
-import { workshops } from '../data/workshops'
-import { articles } from '../data/articles'
+import { useWorkshops, useArticles } from '../sanity/useSanityData'
 import { publications } from '../data/publications'
 
 const typeLabelMap: Record<string, { en: string; pt: string }> = {
@@ -14,6 +13,8 @@ const typeLabelMap: Record<string, { en: string; pt: string }> = {
 
 export default function Teaching() {
   const { t, lang } = useTranslation()
+  const { workshops } = useWorkshops()
+  const { articles } = useArticles()
 
   return (
     <section id="teaching" className="section-padding bg-[#FAF8F5] dark:bg-[#151714] border-b border-[#E8E4DC] dark:border-[#2E322C]">

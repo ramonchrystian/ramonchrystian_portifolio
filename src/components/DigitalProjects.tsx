@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
 import { Laptop, ExternalLink, Sparkles, BookOpen, CheckCircle2 } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
-import { digitalMinistryProjects } from '../data/digitalProjects'
+import { useDigitalProjects } from '../sanity/useSanityData'
 
 export default function DigitalProjects() {
   const { t, lang } = useTranslation()
+  const { projects: digitalMinistryProjects } = useDigitalProjects()
 
   const featuredProject = digitalMinistryProjects.find((p) => p.isFeatured)
   const regularProjects = digitalMinistryProjects.filter((p) => !p.isFeatured)

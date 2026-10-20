@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { GraduationCap, BookOpen, Music, Code2, Award, CheckCircle, Compass, HeartHandshake, Mail } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
-import { formalDegrees, complementaryStudies } from '../data/degrees'
+import { useAcademicDegrees } from '../sanity/useSanityData'
 
 const iconMap: Record<string, typeof GraduationCap> = {
   music: Music,
@@ -12,6 +12,7 @@ const iconMap: Record<string, typeof GraduationCap> = {
 
 export default function Academic() {
   const { t, lang } = useTranslation()
+  const { formalDegrees, complementaryStudies } = useAcademicDegrees()
 
   return (
     <section id="academic" className="section-padding bg-[#FAF8F5] dark:bg-[#151714] border-b border-[#E8E4DC] dark:border-[#2E322C]">

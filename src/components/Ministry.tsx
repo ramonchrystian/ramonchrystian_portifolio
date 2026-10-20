@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion'
 import { Music, Users, Sliders, Calendar, ChevronRight, Church, Play } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
-import { ministryExperiences } from '../data/ministryExperiences'
-import { videos } from '../data/videos'
+import { useMinistryExperiences, useVideos } from '../sanity/useSanityData'
 
 const pillarIconMap: Record<string, typeof Music> = {
   worship: Music,
@@ -51,6 +50,8 @@ const pillars = [
 
 export default function Ministry() {
   const { t, lang } = useTranslation()
+  const { experiences: ministryExperiences } = useMinistryExperiences()
+  const { videos } = useVideos()
 
   // Only render videos with actual verified IDs
   const verifiedVideos = videos.filter(

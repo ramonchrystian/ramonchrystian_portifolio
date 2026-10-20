@@ -2,6 +2,27 @@ import type { Workshop } from '../types'
 
 export const workshops: Workshop[] = [
   {
+    id: 'palestra-louvor-adoracao-valqueire',
+    title: {
+      en: 'Praise and Worship: Theological Foundations and Pastoral Practice',
+      pt: 'Palestra: Louvor e Adoração',
+    },
+    event: {
+      en: 'Church Worship & Ministry Equipping',
+      pt: 'Capacitação e Encontro de Louvor e Adoração',
+    },
+    institution: {
+      en: 'Memorial Baptist Church of Vila Valqueire',
+      pt: 'Igreja Batista Memorial de Vila Valqueire',
+    },
+    city: 'Rio de Janeiro',
+    year: {
+      en: 'Nov 2026',
+      pt: 'Nov 2026',
+    },
+    type: 'lecture',
+  },
+  {
     id: 'pratica-banda-conecte-madureira',
     title: {
       en: 'Band Practice & Rehearsal Dynamics Workshop',

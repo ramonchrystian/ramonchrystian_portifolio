@@ -250,9 +250,11 @@ Apresentação biográfica concisa em três parágrafos articulados, seguida de 
 * **Formação de Lideranças:** Capacitação de voluntários locais para aliar caráter pastoral a rigor técnico.
 
 #### Workshops Representativos Selecionados
-1. **Workshop de Prática de Banda — Congresso Conecte (Nov 2026)**
+1. **Palestra: Louvor e Adoração (Nov 2026)**
+   * *Instituição:* Igreja Batista Memorial de Vila Valqueire (Rio de Janeiro, RJ).
+2. **Workshop de Prática de Banda — Congresso Conecte (Nov 2026)**
    * *Instituição:* Primeira Igreja Batista de Madureira (Rio de Janeiro, RJ).
-2. **Workshop de Prática de Banda e Coordenação Instrumental (Nov 2026)**
+3. **Workshop de Prática de Banda e Coordenação Instrumental (Nov 2026)**
    * *Instituição:* Primeira Igreja Batista do Lins (Rio de Janeiro, RJ).
 3. **Improvisação Instrumental para Músicos de Igreja (Out 2026)**
    * *Instituição:* Associação dos Músicos Batistas Fluminenses — AMBF (Rio Bonito, RJ).
@@ -356,11 +358,19 @@ Projetos apresentados em formato editorial de estudo de caso com 4 dimensões an
 
 ---
 
-### 4.9 Rodapé (Footer)
-* Identificação institucional com assinatura serifada *Ramon Chrystian*.
-* Frase de propósito: *"Música Sacra, Educação Ministerial & Inovação Digital"*.
-* Localização: *Rio de Janeiro, Brasil*.
-* Copyright atualizado dinamicamente.
+### 4.10 Página Inicial de Manutenção & Acesso Desenvolvedor (`Maintenance.tsx`)
+* **Propósito:** Apresentação solene e acolhedora aos visitantes enquanto o site passa por curadoria final.
+* **Elementos Visuais:**
+  * Retrato editorial oficial e tipografia comemorativa *Ramon Chrystian*.
+  * Selo pulsante: *"Em Preparação · Curadoria Final"*.
+  * Mensagem institucional explicando que o dossiê acadêmico e registros ministeriais estão sendo finalizados.
+  * Botões de contato direto para e-mail (`ramonchrystian@gmail.com`), Letra Sonora, Instagram e YouTube.
+  * Suporte a internacionalização (PT/EN) e alternância de tema claro/escuro.
+* **Autenticação de Desenvolvedor:**
+  * Modal discreto de login via chave `Lock`.
+  * Usuário: `ramon`
+  * Senha: `Podx3!ramonchrystian`
+  * Persistência em `localStorage` com botão flutuante discreto para bloquear e retornar ao modo manutenção a qualquer momento.
 
 ---
 

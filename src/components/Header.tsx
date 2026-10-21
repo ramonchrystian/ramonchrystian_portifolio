@@ -66,39 +66,48 @@ export default function Header() {
         </div>
 
         {/* Right Actions: Partner CTA + Theme + Lang */}
-        <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-          {/* Uncompressed, prominent partner button */}
+        <div className="flex items-center gap-2.5 sm:gap-3.5 shrink-0">
+          {/* Prestigious, dignified partner button */}
           <button
             onClick={() => handleNavClick('#partnership')}
-            className="shrink-0 whitespace-nowrap inline-flex items-center gap-1.5 sm:gap-2 rounded-lg border-2 border-[#8A6224] bg-[#8A6224]/10 hover:bg-[#8A6224]/20 px-3 sm:px-3.5 py-1.5 text-xs font-semibold text-[#8A6224] transition-all duration-150 dark:border-[#D0AC6C] dark:bg-[#D0AC6C]/10 dark:text-[#D0AC6C] dark:hover:bg-[#D0AC6C]/20 shadow-xs cursor-pointer"
+            className="group shrink-0 whitespace-nowrap inline-flex items-center gap-2 rounded-full border border-[#8A6224]/30 bg-[#1B3B2B] px-3.5 sm:px-4 py-1.5 sm:py-2 text-xs font-serif font-medium text-[#FAF8F5] shadow-xs transition-all duration-200 hover:bg-[#254E39] hover:shadow-md hover:border-[#8A6224]/60 dark:border-[#D0AC6C]/40 dark:bg-[#D0AC6C] dark:text-[#151714] dark:hover:bg-[#E0BC7C] cursor-pointer"
             title={t('nav.partner')}
           >
-            <HeartHandshake size={14} className="shrink-0 text-[#8A6224] dark:text-[#D0AC6C]" />
-            <span className="whitespace-nowrap">{t('nav.partner')}</span>
+            <HeartHandshake
+              size={14}
+              className="shrink-0 text-[#D0AC6C] transition-transform duration-200 group-hover:scale-110 dark:text-[#151714]"
+            />
+            <span className="tracking-wide">{t('nav.partner')}</span>
           </button>
 
-          <button
-            onClick={toggleTheme}
-            className="rounded-md p-2 text-[#52514B] transition-colors duration-150 hover:bg-[#E8E4DC]/50 hover:text-[#1B3B2B] dark:text-[#B8B8AE] dark:hover:bg-[#20231F] dark:hover:text-[#F3F0E8] cursor-pointer shrink-0"
-            aria-label={t(theme === 'dark' ? 'theme.light' : 'theme.dark')}
-            title={t(theme === 'dark' ? 'theme.light' : 'theme.dark')}
-          >
-            {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
-          </button>
+          {/* Elegant vertical separator */}
+          <div className="h-4 w-px bg-[#E8E4DC] dark:bg-[#2E322C] hidden sm:block" />
 
-          <button
-            onClick={toggleLang}
-            className="rounded-md border border-[#E8E4DC] px-2.5 py-1 font-mono text-xs font-medium text-[#252622] transition-all duration-150 hover:border-[#8A6224] hover:text-[#1B3B2B] dark:border-[#2E322C] dark:text-[#F3F0E8] dark:hover:border-[#D0AC6C] dark:hover:text-[#D0AC6C] cursor-pointer shrink-0"
-            aria-label={`Switch language to ${lang === 'en' ? 'Português' : 'English'}`}
-            title={`Switch language to ${lang === 'en' ? 'Português' : 'English'}`}
-          >
-            {lang === 'en' ? 'PT' : 'EN'}
-          </button>
+          {/* Theme & Language Toggles */}
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={toggleTheme}
+              className="rounded-md p-1.5 sm:p-2 text-[#52514B] transition-colors duration-150 hover:bg-[#E8E4DC]/50 hover:text-[#1B3B2B] dark:text-[#B8B8AE] dark:hover:bg-[#20231F] dark:hover:text-[#F3F0E8] cursor-pointer"
+              aria-label={t(theme === 'dark' ? 'theme.light' : 'theme.dark')}
+              title={t(theme === 'dark' ? 'theme.light' : 'theme.dark')}
+            >
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+
+            <button
+              onClick={toggleLang}
+              className="rounded-md border border-[#E8E4DC] px-2 sm:px-2.5 py-1 font-mono text-[11px] sm:text-xs font-medium text-[#252622] transition-all duration-150 hover:border-[#8A6224] hover:text-[#1B3B2B] dark:border-[#2E322C] dark:text-[#F3F0E8] dark:hover:border-[#D0AC6C] dark:hover:text-[#D0AC6C] cursor-pointer"
+              aria-label={`Switch language to ${lang === 'en' ? 'Português' : 'English'}`}
+              title={`Switch language to ${lang === 'en' ? 'Português' : 'English'}`}
+            >
+              {lang === 'en' ? 'PT' : 'EN'}
+            </button>
+          </div>
 
           {/* Mobile Menu Toggle (shown when screen < lg) */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="ml-1 rounded-md p-1.5 text-[#252622] transition-colors hover:text-[#1B3B2B] lg:hidden dark:text-[#F3F0E8] dark:hover:text-[#72947B] cursor-pointer shrink-0"
+            className="ml-0.5 rounded-md p-1.5 text-[#252622] transition-colors hover:text-[#1B3B2B] lg:hidden dark:text-[#F3F0E8] dark:hover:text-[#72947B] cursor-pointer"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={22} /> : <Menu size={22} />}
@@ -128,9 +137,9 @@ export default function Header() {
 
               <button
                 onClick={() => handleNavClick('#partnership')}
-                className="my-1.5 flex items-center justify-center gap-2 rounded-lg border-2 border-[#8A6224] bg-[#8A6224]/10 px-3 py-2.5 text-xs font-serif font-semibold text-[#8A6224] dark:border-[#D0AC6C] dark:bg-[#D0AC6C]/10 dark:text-[#D0AC6C]"
+                className="my-2 flex items-center justify-center gap-2 rounded-full bg-[#1B3B2B] px-4 py-3 text-xs font-serif font-semibold text-[#FAF8F5] shadow-sm transition-colors hover:bg-[#254E39] dark:bg-[#D0AC6C] dark:text-[#151714]"
               >
-                <HeartHandshake size={15} />
+                <HeartHandshake size={15} className="text-[#D0AC6C] dark:text-[#151714]" />
                 <span>{t('nav.partner')}</span>
               </button>
 

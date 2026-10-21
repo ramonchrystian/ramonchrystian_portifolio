@@ -15,17 +15,24 @@ import Gallery from './components/Gallery'
 import VocationalHorizon from './components/VocationalHorizon'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { Eye, AlertTriangle } from 'lucide-react'
 
 function MainContent() {
-  const { isAdmin, isMaintenance } = useAdmin()
+  const { isAdmin, isMaintenance, adminPreviewSite, toggleAdminPreviewSite } = useAdmin()
 
-  // If maintenance mode is active and visitor is not admin, show maintenance screen
-  if (isMaintenance && !isAdmin) {
+  // If maintenance mode is active:
+  // - Regular visitors ALWAYS see the maintenance screen.
+  // - Admin also sees the maintenance screen by default to verify it, with AdminBar at the top.
+  // - Admin can toggle "adminPreviewSite" to temporarily inspect the full site.
+  if (isMaintenance && (!isAdmin || !adminPreviewSite)) {
     return (
-      <>
-        <Maintenance />
+      <div className="min-h-screen bg-[#FAF8F5] dark:bg-[#151714]">
+        {isAdmin && <AdminBar />}
+        <div className={isAdmin ? 'pt-[42px]' : ''}>
+          <Maintenance />
+        </div>
         <AdminLoginModal />
-      </>
+      </div>
     )
   }
 
@@ -36,6 +43,24 @@ function MainContent() {
       }`}
     >
       <AdminBar />
+
+      {/* Amber banner when admin is previewing full site while maintenance is active */}
+      {isAdmin && isMaintenance && adminPreviewSite && (
+        <div className="bg-amber-500/15 border-b border-amber-500/30 px-4 py-2 text-center text-xs font-mono text-amber-900 dark:text-amber-300 flex items-center justify-center gap-2 flex-wrap">
+          <AlertTriangle size={14} className="text-amber-600 dark:text-amber-400 shrink-0" />
+          <span>
+            <strong>Modo Manutenção Ativo:</strong> Os visitantes externos estão vendo a tela de manutenção. Você está visualizando o site como Administrador.
+          </span>
+          <button
+            onClick={toggleAdminPreviewSite}
+            className="inline-flex items-center gap-1 underline font-semibold hover:opacity-80 cursor-pointer ml-1"
+          >
+            <Eye size={12} />
+            Ver Tela de Manutenção
+          </button>
+        </div>
+      )}
+
       <Header />
       <main>
         <Hero />

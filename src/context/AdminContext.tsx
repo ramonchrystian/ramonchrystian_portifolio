@@ -1,14 +1,20 @@
-import { createContext, useContext, useState, type ReactNode } from 'react'
+import { createContext, useContext, useState, useEffect, type ReactNode } from 'react'
+import { client, writeClient } from '../sanity/client'
+import { siteSettingsQuery } from '../sanity/queries'
 
 interface AdminContextType {
   isAdmin: boolean
   isMaintenance: boolean
+  adminPreviewSite: boolean
+  toggleAdminPreviewSite: () => void
+  setAdminPreviewSite: (preview: boolean) => void
   showLoginModal: boolean
   setShowLoginModal: (show: boolean) => void
   login: (username: string, pass: string) => boolean
   logout: () => void
-  toggleMaintenance: () => void
-  setMaintenance: (value: boolean) => void
+  toggleMaintenance: () => Promise<void>
+  setMaintenance: (value: boolean) => Promise<void>
+  isUpdatingMaintenance: boolean
 }
 
 const AdminContext = createContext<AdminContextType | undefined>(undefined)
@@ -21,12 +27,34 @@ export function AdminProvider({ children }: { children: ReactNode }) {
     return localStorage.getItem(ADMIN_STORAGE_KEY) === 'true'
   })
 
-  // Site is open to the public by default (false), unless toggled on by admin
   const [isMaintenance, setIsMaintenance] = useState<boolean>(() => {
     return localStorage.getItem(MAINTENANCE_STORAGE_KEY) === 'true'
   })
 
+  // When maintenance is active, adminPreviewSite allows admin to see the full site instead of the maintenance page
+  const [adminPreviewSite, setAdminPreviewSite] = useState<boolean>(false)
+  const [isUpdatingMaintenance, setIsUpdatingMaintenance] = useState<boolean>(false)
   const [showLoginModal, setShowLoginModal] = useState<boolean>(false)
+
+  // On initial load, fetch cloud maintenance state from Sanity
+  useEffect(() => {
+    let isMounted = true
+    client
+      .fetch<{ isMaintenanceMode?: boolean } | null>(siteSettingsQuery)
+      .then((res) => {
+        if (isMounted && res && typeof res.isMaintenanceMode === 'boolean') {
+          setIsMaintenance(res.isMaintenanceMode)
+          localStorage.setItem(MAINTENANCE_STORAGE_KEY, String(res.isMaintenanceMode))
+        }
+      })
+      .catch((err) => {
+        console.warn('Sanity: aviso ao consultar modo manutenção, usando estado local.', err)
+      })
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   const login = (username: string, pass: string): boolean => {
     if (username.trim().toLowerCase() === 'ramon' && pass === 'Podx3!ramonchrystian') {
@@ -40,19 +68,41 @@ export function AdminProvider({ children }: { children: ReactNode }) {
   const logout = () => {
     setIsAdmin(false)
     localStorage.removeItem(ADMIN_STORAGE_KEY)
+    setAdminPreviewSite(false)
   }
 
-  const toggleMaintenance = () => {
-    setIsMaintenance((prev) => {
-      const next = !prev
-      localStorage.setItem(MAINTENANCE_STORAGE_KEY, String(next))
-      return next
-    })
+  const toggleAdminPreviewSite = () => {
+    setAdminPreviewSite((prev) => !prev)
   }
 
-  const setMaintenance = (value: boolean) => {
+  const setMaintenance = async (value: boolean) => {
     setIsMaintenance(value)
     localStorage.setItem(MAINTENANCE_STORAGE_KEY, String(value))
+    if (value) {
+      // When turning maintenance ON, default adminPreviewSite to false so admin sees the maintenance screen immediately
+      setAdminPreviewSite(false)
+    }
+
+    try {
+      setIsUpdatingMaintenance(true)
+      await writeClient
+        .createIfNotExists({
+          _id: 'siteSettings',
+          _type: 'siteSettings',
+          isMaintenanceMode: value,
+        })
+        .then(() =>
+          writeClient.patch('siteSettings').set({ isMaintenanceMode: value }).commit()
+        )
+    } catch (err) {
+      console.warn('Erro ao sincronizar manutenção com Sanity:', err)
+    } finally {
+      setIsUpdatingMaintenance(false)
+    }
+  }
+
+  const toggleMaintenance = async () => {
+    await setMaintenance(!isMaintenance)
   }
 
   return (
@@ -60,12 +110,16 @@ export function AdminProvider({ children }: { children: ReactNode }) {
       value={{
         isAdmin,
         isMaintenance,
+        adminPreviewSite,
+        toggleAdminPreviewSite,
+        setAdminPreviewSite,
         showLoginModal,
         setShowLoginModal,
         login,
         logout,
         toggleMaintenance,
         setMaintenance,
+        isUpdatingMaintenance,
       }}
     >
       {children}

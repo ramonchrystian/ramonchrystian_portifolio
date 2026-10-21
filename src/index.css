@@ -9,11 +9,11 @@
   --color-deep-forest-light: #254E39;
   --color-charcoal: #252622;
   --color-charcoal-muted: #43443F;
-  --color-muted-gold: #B58B49;
-  --color-muted-gold-light: #C9A05C;
+  --color-muted-gold: #8A6224;
+  --color-muted-gold-light: #B58B49;
   --color-soft-stone: #E8E4DC;
   --color-soft-stone-light: #F0ECE4;
-  --color-muted-gray: #77766F;
+  --color-muted-gray: #52514B;
 
   /* Dark mode specific tokens */
   --color-dark-bg: #151714;
@@ -92,19 +92,19 @@
 }
 
 @utility btn-secondary {
-  @apply inline-flex items-center gap-2 rounded-md border border-[#E8E4DC] bg-transparent px-5 py-2.5 text-sm font-medium text-[#252622] transition-all duration-200 hover:border-[#B58B49]/50 hover:bg-[#E8E4DC]/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B3B2B] dark:border-[#2E322C] dark:text-[#F3F0E8] dark:hover:border-[#D0AC6C]/50 dark:hover:bg-[#20231F] cursor-pointer;
+  @apply inline-flex items-center gap-2 rounded-md border border-[#E8E4DC] bg-transparent px-5 py-2.5 text-sm font-medium text-[#252622] transition-all duration-200 hover:border-[#8A6224]/50 hover:bg-[#E8E4DC]/30 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1B3B2B] dark:border-[#2E322C] dark:text-[#F3F0E8] dark:hover:border-[#D0AC6C]/50 dark:hover:bg-[#20231F] cursor-pointer;
 }
 
 @utility editorial-badge {
-  @apply inline-flex items-center gap-2 rounded-full border border-[#B58B49]/30 bg-[#B58B49]/10 px-3.5 py-1 font-mono text-[11px] font-medium uppercase tracking-wider text-[#B58B49] dark:border-[#D0AC6C]/30 dark:bg-[#D0AC6C]/10 dark:text-[#D0AC6C];
+  @apply inline-flex items-center gap-2 rounded-full border border-[#8A6224]/30 bg-[#8A6224]/10 px-3.5 py-1 font-mono text-[11px] font-medium uppercase tracking-wider text-[#8A6224] dark:border-[#D0AC6C]/30 dark:bg-[#D0AC6C]/10 dark:text-[#D0AC6C];
 }
 
 @utility tag-pill {
-  @apply inline-flex items-center gap-1 rounded-md border border-[#E8E4DC] bg-[#FAF8F5] px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-[#77766F] dark:border-[#2E322C] dark:bg-[#20231F] dark:text-[#B8B8AE];
+  @apply inline-flex items-center gap-1 rounded-md border border-[#E8E4DC] bg-[#FAF8F5] px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-[#52514B] dark:border-[#2E322C] dark:bg-[#20231F] dark:text-[#B8B8AE];
 }
 
 @utility editorial-card {
-  @apply rounded-xl border border-[#E8E4DC] bg-[#FAF8F5] p-6 transition-all duration-200 hover:border-[#B58B49]/40 dark:border-[#2E322C] dark:bg-[#20231F] dark:hover:border-[#D0AC6C]/40;
+  @apply rounded-xl border border-[#E8E4DC] bg-[#FAF8F5] p-6 transition-all duration-200 hover:border-[#8A6224]/40 dark:border-[#2E322C] dark:bg-[#20231F] dark:hover:border-[#D0AC6C]/40;
 }
 
 /* Fluid responsive typography */
@@ -139,4 +139,21 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-muted-gold);
+}
+
+/* WCAG AA (>= 4.5:1) Contrast Guarantees on Warm Ivory (#FAF8F5) */
+.text-\[\#77766F\] {
+  color: #52514B !important;
+}
+
+.text-\[\#B58B49\] {
+  color: #8A6224 !important;
+}
+
+.dark .text-\[\#77766F\] {
+  color: #B8B8AE !important;
+}
+
+.dark .text-\[\#B58B49\] {
+  color: #D0AC6C !important;
 }

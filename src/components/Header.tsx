@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Sun, Moon } from 'lucide-react'
+import { Menu, X, Sun, Moon, HeartHandshake } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
 import { useTheme } from '../context/ThemeContext'
 import { useLang } from '../context/LangContext'
@@ -40,7 +40,7 @@ export default function Header() {
           <span className="text-xl sm:text-2xl font-semibold text-[#1B3B2B] dark:text-[#F3F0E8] transition-colors group-hover:text-[#254E39] dark:group-hover:text-[#72947B]">
             Ramon Chrystian
           </span>
-          <span className="font-sans text-[10px] tracking-[0.16em] uppercase text-[#77766F] dark:text-[#B8B8AE]">
+          <span className="font-sans text-[10px] tracking-[0.16em] uppercase text-[#52514B] dark:text-[#B8B8AE]">
             {lang === 'en' ? 'Minister of Music · Sacred Music & Theology' : 'Ministro de Música · Música Sacra e Teologia'}
           </span>
         </a>
@@ -54,16 +54,26 @@ export default function Header() {
               className="group relative text-[11px] font-medium uppercase tracking-[0.15em] text-[#252622]/80 transition-colors duration-150 hover:text-[#1B3B2B] dark:text-[#F3F0E8]/80 dark:hover:text-[#72947B] cursor-pointer"
             >
               <span>{link.label[lang]}</span>
-              <span className="absolute -bottom-1 left-0 h-[1.5px] w-0 bg-[#B58B49] transition-all duration-200 group-hover:w-full dark:bg-[#D0AC6C]" />
+              <span className="absolute -bottom-1 left-0 h-[1.5px] w-0 bg-[#8A6224] transition-all duration-200 group-hover:w-full dark:bg-[#D0AC6C]" />
             </button>
           ))}
         </div>
 
-        {/* Right Actions: Theme + Lang */}
-        <div className="flex items-center gap-2.5">
+        {/* Right Actions: Partner CTA + Theme + Lang */}
+        <div className="flex items-center gap-2 sm:gap-2.5">
+          {/* Subtle outline partner button */}
+          <button
+            onClick={() => handleNavClick('#partnership')}
+            className="inline-flex items-center gap-1.5 rounded-md border border-[#8A6224]/50 bg-[#8A6224]/5 px-2.5 py-1 text-xs font-serif font-semibold text-[#8A6224] transition-all duration-150 hover:border-[#8A6224] hover:bg-[#8A6224]/10 dark:border-[#D0AC6C]/50 dark:bg-[#D0AC6C]/5 dark:text-[#D0AC6C] dark:hover:border-[#D0AC6C] dark:hover:bg-[#D0AC6C]/10 cursor-pointer"
+            title={t('nav.partner')}
+          >
+            <HeartHandshake size={13} className="shrink-0" />
+            <span className="hidden xs:inline sm:inline">{t('nav.partner')}</span>
+          </button>
+
           <button
             onClick={toggleTheme}
-            className="rounded-md p-2 text-[#77766F] transition-colors duration-150 hover:bg-[#E8E4DC]/50 hover:text-[#1B3B2B] dark:text-[#B8B8AE] dark:hover:bg-[#20231F] dark:hover:text-[#F3F0E8] cursor-pointer"
+            className="rounded-md p-2 text-[#52514B] transition-colors duration-150 hover:bg-[#E8E4DC]/50 hover:text-[#1B3B2B] dark:text-[#B8B8AE] dark:hover:bg-[#20231F] dark:hover:text-[#F3F0E8] cursor-pointer"
             aria-label={t(theme === 'dark' ? 'theme.light' : 'theme.dark')}
             title={t(theme === 'dark' ? 'theme.light' : 'theme.dark')}
           >
@@ -72,7 +82,7 @@ export default function Header() {
 
           <button
             onClick={toggleLang}
-            className="rounded-md border border-[#E8E4DC] px-2.5 py-1 font-mono text-xs font-medium text-[#252622] transition-all duration-150 hover:border-[#B58B49] hover:text-[#1B3B2B] dark:border-[#2E322C] dark:text-[#F3F0E8] dark:hover:border-[#D0AC6C] dark:hover:text-[#D0AC6C] cursor-pointer"
+            className="rounded-md border border-[#E8E4DC] px-2.5 py-1 font-mono text-xs font-medium text-[#252622] transition-all duration-150 hover:border-[#8A6224] hover:text-[#1B3B2B] dark:border-[#2E322C] dark:text-[#F3F0E8] dark:hover:border-[#D0AC6C] dark:hover:text-[#D0AC6C] cursor-pointer"
             aria-label={`Switch language to ${lang === 'en' ? 'Português' : 'English'}`}
             title={`Switch language to ${lang === 'en' ? 'Português' : 'English'}`}
           >
@@ -109,6 +119,15 @@ export default function Header() {
                   {link.label[lang]}
                 </button>
               ))}
+
+              <button
+                onClick={() => handleNavClick('#partnership')}
+                className="my-1 flex items-center justify-center gap-2 rounded-md border border-[#8A6224]/60 bg-[#8A6224]/10 px-3 py-2 text-xs font-serif font-semibold text-[#8A6224] dark:border-[#D0AC6C]/60 dark:bg-[#D0AC6C]/10 dark:text-[#D0AC6C]"
+              >
+                <HeartHandshake size={14} />
+                <span>{t('nav.partner')}</span>
+              </button>
+
               <div className="mt-2 flex items-center justify-between border-t border-[#E8E4DC] pt-3 px-3 dark:border-[#2E322C]">
                 <button
                   onClick={toggleTheme}

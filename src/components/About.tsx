@@ -38,8 +38,8 @@ export default function About() {
         pt: 'Discipulado na Igreja Local',
       },
       desc: {
-        en: 'Over a decade shaping volunteer musicians, developing leaders, and serving pastoral teams.',
-        pt: 'Mais de uma década formando instrumentistas voluntários e servindo equipes pastorais.',
+        en: 'Nearly two decades (since 2007) mentoring volunteer musicians, training church leaders, and serving pastoral teams.',
+        pt: 'Quase duas décadas (desde 2007) formando músicos voluntários, desenvolvendo lideranças e servindo equipes pastorais.',
       },
     },
   ]

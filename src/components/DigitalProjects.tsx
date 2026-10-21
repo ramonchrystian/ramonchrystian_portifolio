@@ -134,9 +134,9 @@ export default function DigitalProjects() {
               {/* Right Column (5 cols): Editorial Visual Card */}
               <div className="lg:col-span-5 flex justify-center">
                 <div className="w-full max-w-sm rounded-xl border border-[#E8E4DC] bg-[#FAF8F5] p-6 shadow-xs dark:border-[#2E322C] dark:bg-[#151714]">
-                  <div className="flex items-center justify-between border-b border-[#E8E4DC] pb-3 font-mono text-[10px] text-[#77766F] dark:border-[#2E322C] dark:text-[#B8B8AE]">
-                    <span>EST. 2023</span>
-                    <span className="text-[#B58B49] dark:text-[#D0AC6C]">EDITORIAL INITIATIVE</span>
+                  <div className="flex items-center justify-between border-b border-[#E8E4DC] pb-3 font-mono text-[10px] text-[#52514B] dark:border-[#2E322C] dark:text-[#B8B8AE]">
+                    <span>EST. 2008 / 2011</span>
+                    <span className="text-[#8A6224] dark:text-[#D0AC6C]">EDITORIAL INITIATIVE</span>
                   </div>
 
                   <div className="py-6 text-center space-y-3">
@@ -146,7 +146,7 @@ export default function DigitalProjects() {
                     <h4 className="font-serif text-2xl font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
                       Letra Sonora
                     </h4>
-                    <p className="text-xs text-[#77766F] dark:text-[#B8B8AE] leading-relaxed">
+                    <p className="text-xs text-[#52514B] dark:text-[#B8B8AE] leading-relaxed">
                       {lang === 'en'
                         ? 'Connecting theological reflection, hymnological history, and practical wisdom for church musicians.'
                         : 'Unindo reflexão teológica, história dos hinos e sabedoria prática para músicos cristãos.'}

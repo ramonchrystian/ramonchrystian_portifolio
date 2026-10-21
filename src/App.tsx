@@ -12,6 +12,7 @@ import Teaching from './components/Teaching'
 import Academic from './components/Academic'
 import DigitalProjects from './components/DigitalProjects'
 import Gallery from './components/Gallery'
+import VocationalHorizon from './components/VocationalHorizon'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -44,6 +45,7 @@ function MainContent() {
         <Academic />
         <DigitalProjects />
         <Gallery />
+        <VocationalHorizon />
         <Contact />
       </main>
       <Footer />

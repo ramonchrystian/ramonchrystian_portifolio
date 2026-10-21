@@ -97,3 +97,33 @@ export interface DigitalProjectCaseStudy {
   githubUrl?: string
   isFeatured?: boolean
 }
+
+export interface Book {
+  id: string
+  title: Record<Lang, string>
+  subtitle?: Record<Lang, string>
+  description: Record<Lang, string>
+  year?: string
+  publisher?: Record<Lang, string>
+  url?: string
+  isFeatured?: boolean
+}
+
+export interface EditorialPeriodical {
+  id: string
+  name: Record<Lang, string>
+  organization: Record<Lang, string>
+  role: Record<Lang, string>
+  description: Record<Lang, string>
+}
+
+export interface VerifiedCredential {
+  id: string
+  issuer: 'Google' | 'Meta' | 'University of Michigan' | 'LearnQuest'
+  title: string
+  credentialId?: string
+  date?: string
+  url?: string
+  grade?: string
+  category?: 'ai' | 'pm' | 'frontend' | 'cloud'
+}

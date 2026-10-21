@@ -11,9 +11,14 @@ const LangContext = createContext<LangContextType | undefined>(undefined)
 
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
-    const stored = localStorage.getItem('lang')
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const paramLang = params.get('lang')?.toLowerCase()
+      if (paramLang === 'en' || paramLang === 'pt') return paramLang
+    }
+    const stored = typeof window !== 'undefined' ? localStorage.getItem('lang') : null
     if (stored === 'en' || stored === 'pt') return stored
-      return 'en'
+    return 'en'
   })
 
   const setLang = useCallback((newLang: Lang) => {

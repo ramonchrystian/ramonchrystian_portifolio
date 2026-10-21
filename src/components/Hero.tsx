@@ -128,14 +128,16 @@ export default function Hero() {
 
               <div className="overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#FAF8F5] p-6 sm:p-7 shadow-xs dark:border-[#2E322C] dark:bg-[#20231F]">
                 {/* Top Folio Header */}
-                <div className="flex items-center justify-between border-b border-[#E8E4DC] pb-3 font-mono text-[11px] text-[#77766F] dark:border-[#2E322C] dark:text-[#B8B8AE]">
+                <div className="flex items-center justify-between border-b border-[#E8E4DC] pb-3 font-mono text-[10px] text-[#52514B] dark:border-[#2E322C] dark:text-[#B8B8AE]">
                   <span>RIO DE JANEIRO, BR</span>
-                  <span className="text-[#B58B49] dark:text-[#D0AC6C]">EST. 2011</span>
+                  <span className="text-[#8A6224] dark:text-[#D0AC6C]" title={lang === 'en' ? 'Ministry leadership since 2007 · Letra Sonora since 2008 · Ordained 2011' : 'Liderança ministerial desde 2007 · Letra Sonora desde 2008 · Consagração 2011'}>
+                    EST. 2011 · {lang === 'en' ? 'SINCE 2007' : 'DESDE 2007'}
+                  </span>
                 </div>
 
                 {/* Central Portrait & Inscription */}
                 <div className="py-6 text-center">
-                  <div className="relative mx-auto mb-4 h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-2 border-[#B58B49]/50 shadow-md dark:border-[#D0AC6C]/50">
+                  <div className="relative mx-auto mb-4 h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-2 border-[#8A6224]/50 shadow-md dark:border-[#D0AC6C]/50">
                     <img
                       src="/retrato1.png"
                       alt="Ramon Chrystian - Ministro de Música"
@@ -147,23 +149,23 @@ export default function Hero() {
                     Ramon Chrystian
                   </h2>
 
-                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-[#B58B49] dark:text-[#D0AC6C]">
+                  <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.12em] text-[#8A6224] dark:text-[#D0AC6C]">
                     {lang === 'en'
-                      ? 'Minister of Music · Sacred Music & Theology Candidate'
-                      : 'Ministro de Música · B. Música Sacra & Bacharelando em Teologia'}
+                      ? 'Ordained Minister of Music · B.S.M. (FABAT/STBSB) & B.Th. Candidate (FABAT)'
+                      : 'Ministro de Música · B. Música Sacra (FABAT/STBSB) & Bacharelando em Teologia (FABAT)'}
                   </p>
 
-                  <p className="mt-3.5 text-xs italic leading-relaxed text-[#77766F] dark:text-[#B8B8AE] font-serif max-w-[280px] mx-auto">
+                  <p className="mt-3.5 text-xs italic leading-relaxed text-[#52514B] dark:text-[#B8B8AE] font-serif max-w-[280px] mx-auto">
                     {lang === 'en'
-                      ? '“Serving the Church through theological depth, musical craftsmanship, and practical innovation.”'
-                      : '“Servindo à Igreja por meio da solidez teológica, excelência musical e inovação responsável.”'}
+                      ? '“Serving the Church through theological depth, musical craftsmanship, and practical innovation — nearly two decades of worship ministry.”'
+                      : '“Servindo à Igreja por meio da solidez teológica, excelência musical e inovação responsável — quase duas décadas de ministério.”'}
                   </p>
                 </div>
 
                 {/* Bottom Verification Seal */}
-                <div className="border-t border-[#E8E4DC] pt-3.5 flex items-center justify-between font-mono text-[10px] text-[#77766F] dark:border-[#2E322C] dark:text-[#B8B8AE]">
-                  <span className="text-[#1B3B2B] dark:text-[#72947B] font-semibold">STBSB ALUMNUS</span>
-                  <span>{lang === 'en' ? 'B.Sacred Music & Theology' : 'B. Música Sacra & Teologia'}</span>
+                <div className="border-t border-[#E8E4DC] pt-3.5 flex items-center justify-between font-mono text-[10px] text-[#52514B] dark:border-[#2E322C] dark:text-[#B8B8AE]">
+                  <span className="text-[#1B3B2B] dark:text-[#72947B] font-semibold">FABAT / STBSB</span>
+                  <span>{lang === 'en' ? 'B.Sacred Music & B.Th. (FABAT)' : 'B. Música Sacra & Teologia'}</span>
                 </div>
               </div>
             </div>
@@ -212,15 +214,15 @@ export default function Hero() {
               <div className="mt-5 rounded-lg border border-[#E8E4DC] bg-[#FAF8F5] p-4 dark:border-[#2E322C] dark:bg-[#151714] space-y-2 text-xs">
                 <div className="flex items-center gap-2 text-[#252622] dark:text-[#F3F0E8]">
                   <CheckCircle2 size={14} className="text-[#1B3B2B] dark:text-[#72947B] shrink-0" />
-                  <span>{lang === 'en' ? 'Bachelor of Sacred Music (Concluded)' : 'Bacharel em Música Sacra (Concluído)'}</span>
+                  <span>{lang === 'en' ? 'Bachelor of Sacred Music (FABAT/STBSB · GPA 9.06 / 10.0)' : 'Bacharel em Música Sacra (FABAT/STBSB · Média 9,06 / 10,0)'}</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#252622] dark:text-[#F3F0E8]">
                   <CheckCircle2 size={14} className="text-[#1B3B2B] dark:text-[#72947B] shrink-0" />
-                  <span>{lang === 'en' ? 'Bachelor of Theology (In Progress)' : 'Bacharelado em Teologia (Em andamento)'}</span>
+                  <span>{lang === 'en' ? 'Bachelor of Theology Candidate (FABAT)' : 'Bacharelando em Teologia (FABAT)'}</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#252622] dark:text-[#F3F0E8]">
                   <CheckCircle2 size={14} className="text-[#1B3B2B] dark:text-[#72947B] shrink-0" />
-                  <span>{lang === 'en' ? '14+ years local church music leadership' : 'Mais de 14 anos de ministério na igreja local'}</span>
+                  <span>{lang === 'en' ? 'Nearly two decades of pastoral worship leadership (since 2007)' : 'Quase duas décadas de ministério na igreja local (desde 2007)'}</span>
                 </div>
               </div>
 

@@ -8,6 +8,7 @@ import {
   digitalProjectsQuery,
   siteSettingsQuery,
   academicDegreesQuery,
+  galleryImagesQuery,
 } from './queries'
 
 import { articles as staticArticles } from '../data/articles'
@@ -16,7 +17,8 @@ import { ministryExperiences as staticMinistryExperiences } from '../data/minist
 import { videos as staticVideos } from '../data/videos'
 import { digitalMinistryProjects as staticDigitalProjects } from '../data/digitalProjects'
 import { formalDegrees as staticFormalDegrees, complementaryStudies as staticComplementaryStudies } from '../data/degrees'
-import type { Article, Workshop, MinistryExperience, VideoProject, DigitalProjectCaseStudy, Degree } from '../types'
+import { staticGallery, defaultGooglePhotosUrl } from '../data/gallery'
+import type { Article, Workshop, MinistryExperience, VideoProject, DigitalProjectCaseStudy, Degree, GalleryItem } from '../types'
 
 export function useArticles(): { articles: Article[]; loading: boolean } {
   const [data, setData] = useState<Article[]>(staticArticles)
@@ -168,6 +170,8 @@ export interface SiteSettingsData {
   youtubeUrl?: string
   instagramUrl?: string
   curriculumPdf?: any
+  googlePhotosAlbumUrl?: string
+  isMaintenanceMode?: boolean
 }
 
 export function useSiteSettings(): { settings: SiteSettingsData | null; loading: boolean } {
@@ -238,4 +242,51 @@ export function useAcademicDegrees(): {
   }, [])
 
   return { formalDegrees: formal, complementaryStudies: complementary, loading }
+}
+
+export function useGalleryImages(): {
+  galleryItems: GalleryItem[]
+  googlePhotosUrl: string
+  loading: boolean
+} {
+  const [items, setItems] = useState<GalleryItem[]>(staticGallery)
+  const [googlePhotosUrl, setGooglePhotosUrl] = useState<string>(defaultGooglePhotosUrl)
+  const [loading, setLoading] = useState<boolean>(true)
+
+  useEffect(() => {
+    let isMounted = true
+
+    // Fetch gallery images
+    client
+      .fetch<GalleryItem[]>(galleryImagesQuery)
+      .then((res) => {
+        if (isMounted && res && res.length > 0) {
+          setItems(res)
+        }
+      })
+      .catch((err) => {
+        console.warn('Sanity: erro ao carregar galeria, usando dados locais.', err)
+      })
+
+    // Fetch google photos album URL from site settings
+    client
+      .fetch<{ googlePhotosAlbumUrl?: string } | null>(siteSettingsQuery)
+      .then((settings) => {
+        if (isMounted && settings?.googlePhotosAlbumUrl) {
+          setGooglePhotosUrl(settings.googlePhotosAlbumUrl)
+        }
+      })
+      .catch((err) => {
+        console.warn('Sanity: erro ao carregar URL do Google Fotos.', err)
+      })
+      .finally(() => {
+        if (isMounted) setLoading(false)
+      })
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  return { galleryItems: items, googlePhotosUrl, loading }
 }

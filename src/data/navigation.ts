@@ -6,5 +6,6 @@ export const navLinks: NavLink[] = [
   { label: { en: 'Teaching & Formation', pt: 'Ensino & Formação' }, href: '#teaching' },
   { label: { en: 'Academic', pt: 'Formação Acadêmica' }, href: '#academic' },
   { label: { en: 'Digital Projects', pt: 'Projetos Digitais' }, href: '#digital' },
+  { label: { en: 'Gallery', pt: 'Galeria' }, href: '#gallery' },
   { label: { en: 'Contact', pt: 'Contato' }, href: '#contact' },
 ]

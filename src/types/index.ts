@@ -48,6 +48,18 @@ export interface MinistryExperience {
   period: string | Record<Lang, string>
   responsibilities: Record<Lang, string[]>
   highlights?: Record<Lang, string[]>
+  photo?: any
+  caption?: Record<Lang, string>
+}
+
+export interface GalleryItem {
+  id: string
+  title: Record<Lang, string>
+  caption?: Record<Lang, string>
+  image: any
+  category: 'worship' | 'cantata' | 'choir' | 'workshop' | 'portrait'
+  date?: string
+  order?: number
 }
 
 export interface Workshop {

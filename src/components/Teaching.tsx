@@ -3,6 +3,7 @@ import { BookOpen, MapPin, Calendar, ExternalLink, GraduationCap, FileText } fro
 import { useTranslation } from '../hooks/useTranslation'
 import { useWorkshops, useArticles } from '../sanity/useSanityData'
 import { publications } from '../data/publications'
+import EditButton from './EditButton'
 
 const typeLabelMap: Record<string, { en: string; pt: string }> = {
   workshop: { en: 'Workshop', pt: 'Oficina / Workshop' },
@@ -20,24 +21,37 @@ export default function Teaching() {
     <section id="teaching" className="section-padding bg-[#FAF8F5] dark:bg-[#151714] border-b border-[#E8E4DC] dark:border-[#2E322C]">
       <div className="section-container">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl"
-        >
-          <div className="editorial-badge mb-3">
-            <GraduationCap size={13} />
-            <span>{t('teaching.badge')}</span>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5 }}
+            className="max-w-2xl"
+          >
+            <div className="editorial-badge mb-3">
+              <GraduationCap size={13} />
+              <span>{t('teaching.badge')}</span>
+            </div>
+            <h2 className="section-title font-serif font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+              {t('teaching.title')}
+            </h2>
+            <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#77766F] dark:text-[#B8B8AE]">
+              {t('teaching.subtitle')}
+            </p>
+          </motion.div>
+
+          <div className="flex flex-wrap gap-2">
+            <EditButton
+              documentType="workshop"
+              label={lang === 'en' ? 'Manage Workshops' : 'Gerenciar Workshops'}
+            />
+            <EditButton
+              documentType="article"
+              label={lang === 'en' ? 'Manage Articles' : 'Gerenciar Artigos'}
+            />
           </div>
-          <h2 className="section-title font-serif font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
-            {t('teaching.title')}
-          </h2>
-          <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#77766F] dark:text-[#B8B8AE]">
-            {t('teaching.subtitle')}
-          </p>
-        </motion.div>
+        </div>
 
         {/* Synthesis & Editorial Focus Card */}
         <motion.div

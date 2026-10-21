@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Laptop, ExternalLink, Sparkles, BookOpen, CheckCircle2 } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
 import { useDigitalProjects } from '../sanity/useSanityData'
+import EditButton from './EditButton'
 
 export default function DigitalProjects() {
   const { t, lang } = useTranslation()
@@ -14,27 +15,34 @@ export default function DigitalProjects() {
     <section id="digital" className="section-padding bg-[#FAF8F5] dark:bg-[#151714] border-b border-[#E8E4DC] dark:border-[#2E322C]">
       <div className="section-container">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl"
-        >
-          <div className="editorial-badge mb-3">
-            <Laptop size={13} />
-            <span>{t('digital.badge')}</span>
-          </div>
-          <h2 className="section-title font-serif font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
-            {t('digital.title')}
-          </h2>
-          <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#77766F] dark:text-[#B8B8AE]">
-            {t('digital.subtitle')}
-          </p>
-          <p className="mt-2 text-xs sm:text-sm leading-relaxed text-[#77766F] dark:text-[#B8B8AE] italic">
-            {t('digital.description')}
-          </p>
-        </motion.div>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5 }}
+            className="max-w-2xl"
+          >
+            <div className="editorial-badge mb-3">
+              <Laptop size={13} />
+              <span>{t('digital.badge')}</span>
+            </div>
+            <h2 className="section-title font-serif font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+              {t('digital.title')}
+            </h2>
+            <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#77766F] dark:text-[#B8B8AE]">
+              {t('digital.subtitle')}
+            </p>
+            <p className="mt-2 text-xs sm:text-sm leading-relaxed text-[#77766F] dark:text-[#B8B8AE] italic">
+              {t('digital.description')}
+            </p>
+          </motion.div>
+
+          <EditButton
+            documentType="digitalProject"
+            label={lang === 'en' ? 'Manage Projects' : 'Gerenciar Projetos'}
+          />
+        </div>
 
         {/* 1. FEATURED FLAGSHIP SPOTLIGHT: LETRA SONORA */}
         {featuredProject && (

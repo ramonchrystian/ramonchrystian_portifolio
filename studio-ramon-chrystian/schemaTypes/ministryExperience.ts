@@ -42,6 +42,21 @@ export const ministryExperience = defineType({
       of: [{ type: 'localeText' }],
     }),
     defineField({
+      name: 'photo',
+      title: 'Foto / Registro Litúrgico da Igreja',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'caption',
+          title: 'Legenda da Foto (opcional)',
+          type: 'localeString',
+        },
+      ],
+    }),
+    defineField({
       name: 'highlights',
       title: 'Destaques Ministeriais',
       type: 'array',
@@ -60,6 +75,7 @@ export const ministryExperience = defineType({
       title: 'church.pt',
       subtitle: 'role.pt',
       description: 'period.pt',
+      media: 'photo',
     },
   },
 })

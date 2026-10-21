@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { GraduationCap, BookOpen, Music, Code2, Award, CheckCircle, Compass, HeartHandshake, Mail } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
 import { useAcademicDegrees } from '../sanity/useSanityData'
+import EditButton from './EditButton'
 
 const iconMap: Record<string, typeof GraduationCap> = {
   music: Music,
@@ -18,24 +19,31 @@ export default function Academic() {
     <section id="academic" className="section-padding bg-[#FAF8F5] dark:bg-[#151714] border-b border-[#E8E4DC] dark:border-[#2E322C]">
       <div className="section-container">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl"
-        >
-          <div className="editorial-badge mb-3">
-            <GraduationCap size={13} />
-            <span>{t('academic.badge')}</span>
-          </div>
-          <h2 className="section-title font-serif font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
-            {t('academic.title')}
-          </h2>
-          <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#77766F] dark:text-[#B8B8AE]">
-            {t('academic.subtitle')}
-          </p>
-        </motion.div>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5 }}
+            className="max-w-2xl"
+          >
+            <div className="editorial-badge mb-3">
+              <GraduationCap size={13} />
+              <span>{t('academic.badge')}</span>
+            </div>
+            <h2 className="section-title font-serif font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+              {t('academic.title')}
+            </h2>
+            <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#77766F] dark:text-[#B8B8AE]">
+              {t('academic.subtitle')}
+            </p>
+          </motion.div>
+
+          <EditButton
+            documentType="academicDegree"
+            label={lang === 'en' ? 'Manage Degrees & Courses' : 'Gerenciar Cursos & Formação'}
+          />
+        </div>
 
         {/* Primary Formal Degrees Grid */}
         <div className="mt-12 space-y-6">

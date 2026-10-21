@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Award, Music, BookOpen, HeartHandshake } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
 import { useLang } from '../context/LangContext'
+import EditButton from './EditButton'
 
 export default function About() {
   const { t } = useTranslation()
@@ -47,24 +48,31 @@ export default function About() {
     <section id="profile" className="section-padding bg-[#FAF8F5] dark:bg-[#151714] border-b border-[#E8E4DC] dark:border-[#2E322C]">
       <div className="section-container">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5 }}
-          className="max-w-2xl"
-        >
-          <div className="editorial-badge mb-3">
-            <Award size={13} />
-            <span>{t('profile.badge')}</span>
-          </div>
-          <h2 className="section-title font-serif font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
-            {t('profile.title')}
-          </h2>
-          <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#77766F] dark:text-[#B8B8AE] font-serif italic">
-            {t('profile.subtitle')}
-          </p>
-        </motion.div>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5 }}
+            className="max-w-2xl"
+          >
+            <div className="editorial-badge mb-3">
+              <Award size={13} />
+              <span>{t('profile.badge')}</span>
+            </div>
+            <h2 className="section-title font-serif font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+              {t('profile.title')}
+            </h2>
+            <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#77766F] dark:text-[#B8B8AE] font-serif italic">
+              {t('profile.subtitle')}
+            </p>
+          </motion.div>
+
+          <EditButton
+            documentType="siteSettings"
+            label={lang === 'en' ? 'Edit Bio & Profile' : 'Editar Biografia & Perfil'}
+          />
+        </div>
 
         {/* Narrative & Profile Layout */}
         <div className="mt-12 grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-14">

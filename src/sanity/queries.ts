@@ -27,6 +27,7 @@ export const ministryExperiencesQuery = `*[_type == "ministryExperience"] | orde
   period,
   startYear,
   isCurrent,
+  photo,
   responsibilities,
   highlights
 }`
@@ -67,7 +68,9 @@ export const siteSettingsQuery = `*[_type == "siteSettings"][0] {
   linkedInUrl,
   youtubeUrl,
   instagramUrl,
-  curriculumPdf
+  curriculumPdf,
+  googlePhotosAlbumUrl,
+  isMaintenanceMode
 }`
 
 export const academicDegreesQuery = `*[_type == "academicDegree"] | order(order asc) {
@@ -80,5 +83,16 @@ export const academicDegreesQuery = `*[_type == "academicDegree"] | order(order 
   description,
   icon,
   isPrimary,
+  order
+}`
+
+export const galleryImagesQuery = `*[_type == "galleryImage"] | order(order asc) {
+  _id,
+  "id": _id,
+  title,
+  caption,
+  image,
+  category,
+  date,
   order
 }`

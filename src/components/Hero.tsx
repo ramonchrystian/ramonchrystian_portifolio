@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, BookOpen, FileText, CheckCircle2, X } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
 import { useLang } from '../context/LangContext'
+import EditButton from './EditButton'
 
 export default function Hero() {
   const { t } = useTranslation()
@@ -28,16 +29,22 @@ export default function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-12">
           {/* Left Column: Presentation & Typography (7 cols) */}
           <div className="lg:col-span-7">
-            {/* Editorial Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="editorial-badge mb-5 sm:mb-6"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-[#B58B49] dark:bg-[#D0AC6C]" />
-              <span>{t('hero.badge')}</span>
-            </motion.div>
+            {/* Editorial Badge & Edit Shortcut */}
+            <div className="flex items-center gap-3 mb-5 sm:mb-6 flex-wrap">
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="editorial-badge"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-[#B58B49] dark:bg-[#D0AC6C]" />
+                <span>{t('hero.badge')}</span>
+              </motion.div>
+              <EditButton
+                documentType="siteSettings"
+                label={lang === 'en' ? 'Edit Hero' : 'Editar Hero & Retrato'}
+              />
+            </div>
 
             {/* Fluid Serif Headline */}
             <motion.h1

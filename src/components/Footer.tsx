@@ -1,8 +1,10 @@
-import { Church } from 'lucide-react'
+import { Church, Lock } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
+import { useAdmin } from '../context/AdminContext'
 
 export default function Footer() {
   const { t } = useTranslation()
+  const { isAdmin, setShowLoginModal } = useAdmin()
 
   return (
     <footer className="border-t border-[#E8E4DC] py-12 bg-[#FAF8F5] dark:border-[#2E322C] dark:bg-[#151714]">
@@ -24,6 +26,20 @@ export default function Footer() {
             </div>
             <span className="hidden sm:inline opacity-30">•</span>
             <span className="font-mono text-[11px]">{t('footer.location')}</span>
+
+            {!isAdmin && (
+              <>
+                <span className="hidden sm:inline opacity-30">•</span>
+                <button
+                  onClick={() => setShowLoginModal(true)}
+                  className="inline-flex items-center gap-1 font-mono text-[11px] text-[#77766F] hover:text-[#1B3B2B] dark:text-[#B8B8AE] dark:hover:text-[#D0AC6C] transition-colors cursor-pointer"
+                  title="Acesso Administrativo"
+                >
+                  <Lock size={11} />
+                  <span>Admin</span>
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>

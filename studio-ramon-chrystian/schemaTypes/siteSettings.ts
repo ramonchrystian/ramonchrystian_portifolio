@@ -54,6 +54,17 @@ export const siteSettings = defineType({
       title: 'Arquivo do Currículo Oficial (PDF)',
       type: 'file',
     }),
+    defineField({
+      name: 'googlePhotosAlbumUrl',
+      title: 'Link do Álbum Completo no Google Fotos',
+      type: 'url',
+    }),
+    defineField({
+      name: 'isMaintenanceMode',
+      title: 'Ativar Modo Manutenção para Visitantes?',
+      type: 'boolean',
+      initialValue: false,
+    }),
   ],
   preview: {
     select: {

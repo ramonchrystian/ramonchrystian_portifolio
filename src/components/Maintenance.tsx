@@ -3,14 +3,16 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Lock, Mail, Globe, Camera, Video, KeyRound, AlertCircle, ArrowRight, Sun, Moon } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
 import { useLang } from '../context/LangContext'
+import { useAdmin } from '../context/AdminContext'
 
 interface MaintenanceProps {
-  onUnlock: () => void
+  onUnlock?: () => void
 }
 
 export default function Maintenance({ onUnlock }: MaintenanceProps) {
   const { lang, toggleLang } = useLang()
   const { theme, toggleTheme } = useTheme()
+  const { login } = useAdmin()
   const [showLoginModal, setShowLoginModal] = useState(false)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -18,10 +20,9 @@ export default function Maintenance({ onUnlock }: MaintenanceProps) {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    if (username.trim().toLowerCase() === 'ramon' && password === 'Podx3!ramonchrystian') {
+    if (login(username, password)) {
       setError(false)
-      localStorage.setItem('rc_dev_auth', 'true')
-      onUnlock()
+      onUnlock?.()
     } else {
       setError(true)
     }

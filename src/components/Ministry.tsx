@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Music, Users, Sliders, Calendar, ChevronRight, Church, Play } from 'lucide-react'
 import { useTranslation } from '../hooks/useTranslation'
 import { useMinistryExperiences, useVideos } from '../sanity/useSanityData'
+import { urlFor } from '../sanity/client'
+import EditButton from './EditButton'
 
 const pillarIconMap: Record<string, typeof Music> = {
   worship: Music,
@@ -116,23 +118,37 @@ export default function Ministry() {
 
         {/* Ministry Experience Timeline */}
         <div className="mt-20">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-10 max-w-2xl"
-          >
-            <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
-              {t('ministry.experience.title')}
-            </h3>
-            <p className="mt-2 text-sm text-[#77766F] dark:text-[#B8B8AE]">
-              {t('ministry.experience.subtitle')}
-            </p>
-          </motion.div>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="max-w-2xl"
+            >
+              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-[#1B3B2B] dark:text-[#F3F0E8]">
+                {t('ministry.experience.title')}
+              </h3>
+              <p className="mt-2 text-sm text-[#77766F] dark:text-[#B8B8AE]">
+                {t('ministry.experience.subtitle')}
+              </p>
+            </motion.div>
+
+            <EditButton
+              documentType="ministryExperience"
+              label={lang === 'en' ? 'Manage Churches & Photos' : 'Gerenciar Igrejas & Fotos'}
+            />
+          </div>
 
           <div className="relative border-l border-[#E8E4DC] pl-6 sm:pl-10 space-y-10 ml-2 sm:ml-4 dark:border-[#2E322C]">
-            {ministryExperiences.map((exp, idx) => (
+            {ministryExperiences.map((exp, idx) => {
+              const churchPhotoUrl = exp.photo
+                ? typeof exp.photo === 'string'
+                  ? exp.photo
+                  : urlFor(exp.photo).width(800).auto('format').url()
+                : null
+
+              return (
               <motion.div
                 key={exp.id}
                 initial={{ opacity: 0, x: -16 }}
@@ -161,6 +177,24 @@ export default function Ministry() {
                       {typeof exp.period === 'string' ? exp.period : exp.period[lang]}
                     </span>
                   </div>
+
+                  {/* Church Ministry Photo if uploaded */}
+                  {churchPhotoUrl && (
+                    <div className="mt-5 overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#FAF8F5] dark:border-[#2E322C] dark:bg-[#151714]">
+                      <div className="aspect-16/9 w-full overflow-hidden">
+                        <img
+                          src={churchPhotoUrl}
+                          alt={exp.church[lang]}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      {exp.caption && (
+                        <div className="px-3.5 py-2 font-mono text-[11px] text-[#77766F] dark:text-[#B8B8AE] border-t border-[#E8E4DC] dark:border-[#2E322C]">
+                          {exp.caption[lang] || exp.caption.pt}
+                        </div>
+                      )}
+                    </div>
+                  )}
 
                   {/* Responsibilities */}
                   <div className="mt-4">
@@ -194,7 +228,7 @@ export default function Ministry() {
                   )}
                 </div>
               </motion.div>
-            ))}
+            )})}
           </div>
         </div>
 

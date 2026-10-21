@@ -32,7 +32,7 @@ function MainContent() {
   return (
     <div
       className={`min-h-screen transition-colors duration-200 bg-[#FAF8F5] text-[#252622] dark:bg-[#151714] dark:text-[#F3F0E8] ${
-        isAdmin ? 'pt-10' : ''
+        isAdmin ? 'pt-[42px]' : ''
       }`}
     >
       <AdminBar />

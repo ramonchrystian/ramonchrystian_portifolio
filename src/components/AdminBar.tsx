@@ -11,7 +11,7 @@ export default function AdminBar() {
   return (
     <aside
       aria-label={lang === 'en' ? 'Administrative Control Bar' : 'Barra de Controle Administrativo'}
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-[100] transition-all duration-300"
     >
       <div className="bg-[#1B3B2B] text-[#FAF8F5] border-b border-[#B58B49]/40 shadow-xl backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 py-2 sm:py-2.5 flex flex-wrap items-center justify-between gap-3 text-xs">
